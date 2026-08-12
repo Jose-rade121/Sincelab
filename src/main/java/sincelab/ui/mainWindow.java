@@ -41,6 +41,10 @@ public final class mainWindow extends JFrame{
         * header.drawRoundRect(0,0,1280,70,20,20);
         */
         
+        
+        
+        
+        
         add(header);//Añade el valor a pantalla
     }
 }
