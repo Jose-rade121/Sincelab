@@ -1,6 +1,9 @@
 package sincelab.ui;
+import java.awt.BorderLayout;
 import javax.swing.*;
 import java.awt.Color;
+import java.awt.Font;
+import javax.swing.border.Border;
 //import java.awt.Graphics2D; -> pa luego.
 
 /**
@@ -16,10 +19,9 @@ public final class mainWindow extends JFrame{
         
         setTitle("SINCELAB"); //Le da un titulo.
         setSize(1280,720);  // Genera el tamaño.
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        //Aqui le dice q hace el boton de cerrar(existen muchos otros).
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
-        getContentPane().setBackground(new Color(226,230,235)); //Cambia el color del fondo
+        getContentPane().setBackground(new Color(226,230,235)); //Cambia el color del fondo.
         
         header();
         
@@ -27,12 +29,29 @@ public final class mainWindow extends JFrame{
     }
     
     public void header(){
-
-        JPanel header = new JPanel(); //Crea un panel
+     
+        
+        
+        JLabel title = new JLabel();
+        //Border border = BorderFactory.createLineBorder(new Color(59,130,246),3);
+        title.setText("SINCELAB");
+        title.setForeground(Color.WHITE);
+        title.setFont(new Font("MV Boli", Font.PLAIN,20)); //Selecciona la fuente.
+        title.setBorder(
+                BorderFactory.createEmptyBorder(0,20,0,0)
+        );
+        
+        
+        
+        
+        
+        
+        
+        JPanel header = new JPanel(); //Crea un panel.
         header.setBackground(new Color(59,130,246));
-        getContentPane().setLayout(null); 
-        //Esto permite que no se remonte sobre los otros
-        header.setBounds(0,0,1280,60);//Altera el tamaño del panel
+        getContentPane().setLayout(null); //Esto permite que no se remonte sobre los otros.
+        header.setBounds(0,0,1280,60);//Altera el tamaño del panel.
+        header.setLayout(new BorderLayout());
         
         /*
         * Para redondear usa una libreria de graficos2D
@@ -43,8 +62,8 @@ public final class mainWindow extends JFrame{
         
         
         
-        
-        
-        add(header);//Añade el valor a pantalla
+        //Añade los valores a la pantalla.
+        add(header);
+        header.add(title, BorderLayout.WEST);
     }
 }
