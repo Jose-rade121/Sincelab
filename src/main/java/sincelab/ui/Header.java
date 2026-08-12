@@ -25,11 +25,32 @@ public class Header extends JPanel{
         //Border border = BorderFactory.createLineBorder(new Color(59,130,246),3);
         title.setText("SINCELAB");
         title.setForeground(Color.WHITE);
-        title.setFont(new Font("MV Boli", Font.PLAIN,20)); //Selecciona la fuente.
+        title.setFont(new Font("Poppins", Font.PLAIN,20)); //Selecciona la fuente.
         title.setBorder(
                 BorderFactory.createEmptyBorder(0,20,0,0)
         );
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //Esto permite que no se remonte sobre los otros.
         setLayout(new BorderLayout());
         setBackground(new Color(59,130,246));
