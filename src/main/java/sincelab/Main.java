@@ -2,6 +2,7 @@ package sincelab;
 
 import sincelab.ui.mainWindow;
 
+
 /**
  *
  * @author josee
@@ -9,6 +10,7 @@ import sincelab.ui.mainWindow;
 public class Main {
     public static void main(String [] args){
         
-     mainWindow window = new mainWindow();
+     new mainWindow();
+     
     }
 }
