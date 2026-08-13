@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
+import sincelab.fonts.principalFont;
+
 
 
 /**
@@ -20,35 +22,21 @@ import javax.swing.JLabel;
 public class Header extends JPanel{
     public Header(){
         setPreferredSize(new Dimension(1280,60));
+ 
+        principalFont fonttype;
+        fonttype = new principalFont();
+        
         
         JLabel title = new JLabel();
         //Border border = BorderFactory.createLineBorder(new Color(59,130,246),3);
         title.setText("SINCELAB");
         title.setForeground(Color.WHITE);
-        title.setFont(new Font("Poppins", Font.PLAIN,20)); //Selecciona la fuente.
+        title.setFont(fonttype.principalFont(fonttype.BESTIME, 0, 20)); //Selecciona la fuente.
         title.setBorder(
                 BorderFactory.createEmptyBorder(0,20,0,0)
         );
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+          
         
         
         //Esto permite que no se remonte sobre los otros.
