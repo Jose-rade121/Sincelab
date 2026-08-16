@@ -15,16 +15,19 @@ git clone https://github.com/Jose-rade121/Sincelab.git
 
 ```
 SINCELAB
-|--src
-|  |-main
-|  |--java
-|  |---com
-|  |----group
-|  |-----sincelab
-|  |------SINCELAB.java
-|---pom.xml
-|---README.md
-|---.gitignore
+|-src
+   |-main
+     |-java
+       |-com
+         |-group
+          |-sincelab
+            |-assets
+              |-fonts
+            |-Main.java
+|-pom.xml
+|-README.md
+|-nb-configuration.xml
+|-.gitignore
 
 ```
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
