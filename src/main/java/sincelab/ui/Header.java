@@ -1,14 +1,14 @@
 package sincelab.ui;
 
 
-import javax.swing.*;
 import java.awt.BorderLayout;
-import java.awt.Font;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
+
+
 import sincelab.fonts.principalFont;
 
 
@@ -37,12 +37,23 @@ public class Header extends JPanel{
         );
 
           
+        //Acomodarlo a la derecha
+        JLabel about = new JLabel();
+        about.setText("About");
+        about.setForeground(Color.WHITE);
+        about.setFont(fonttype.principalFont(fonttype.BESTIME, 0, 16));
+        about.setHorizontalAlignment(about.RIGHT);
+        about.setBorder(
+                BorderFactory.createEmptyBorder(0, 0, 0, 100)
+        );
+        
         
         
         //Esto permite que no se remonte sobre los otros.
         setLayout(new BorderLayout());
         setBackground(new Color(59,130,246));
         add(title, BorderLayout.WEST);
+        add(about);
     }
 
 }
@@ -52,5 +63,5 @@ public class Header extends JPanel{
         Para redondear usa una libreria de graficos2D
         me da cosa que digan q fue con IA entonces mejor pa futuro.
         header.drawRoundRect(0,0,1280,70,20,20);
-        */
+    */
        

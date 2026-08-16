@@ -6,8 +6,8 @@ import java.io.InputStream;
 
 public class principalFont{
     
-    private Font font = null;
-    public String BESTIME = "Bestime.otf";
+    public Font font = null;
+    public String BESTIME = "Bestime.ttf";
     
     public Font principalFont(String fontName, int style, float size){
      
