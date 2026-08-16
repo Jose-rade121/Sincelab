@@ -9,7 +9,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 
-import sincelab.assets.fonts.principalFont;
+import sincelab.asetts.fonts.principalFont;
 
 
 
