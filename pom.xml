@@ -10,4 +10,5 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>com.group.sincelab.SINCELAB</exec.mainClass>
     </properties>
+
 </project>

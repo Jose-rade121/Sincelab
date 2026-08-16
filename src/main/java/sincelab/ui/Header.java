@@ -8,11 +8,6 @@ import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
-
-import sincelab.asetts.fonts.principalFont;
-
-
-
 /**
  *
  * @author josee

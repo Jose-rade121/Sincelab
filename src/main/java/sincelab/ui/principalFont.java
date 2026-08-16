@@ -1,4 +1,4 @@
-package sincelab.asetts.fonts;
+package sincelab.ui;
 
 import java.awt.Font;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 public class principalFont{
     
     public Font font = null;
-    public String BESTIME = "Bestime.ttf";
+    public String BESTIME = "/sincelab/assets/fonts/Bestime.ttf";
     
     public Font principalFont(String fontName, int style, float size){
      
