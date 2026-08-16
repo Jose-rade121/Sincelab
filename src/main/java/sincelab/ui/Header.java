@@ -36,7 +36,7 @@ public class Header extends JPanel{
         JLabel about = new JLabel();
         about.setText("About");
         about.setForeground(Color.WHITE);
-        about.setFont(fonttype.principalFont(fonttype.BESTIME, 0, 16));
+        about.setFont(fonttype.principalFont(fonttype.HEY_COMIC, 0, 16));
         about.setHorizontalAlignment(about.RIGHT);
         about.setBorder(
                 BorderFactory.createEmptyBorder(0, 0, 0, 100)

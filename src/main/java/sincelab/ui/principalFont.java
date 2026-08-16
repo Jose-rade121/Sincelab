@@ -8,6 +8,7 @@ public class principalFont{
     
     public Font font = null;
     public String BESTIME = "/sincelab/assets/fonts/Bestime.ttf";
+    public String HEY_COMIC = "/sincelab/assets/fonts/Hey_Comic.ttf";
     
     public Font principalFont(String fontName, int style, float size){
      
