@@ -1,4 +1,4 @@
-package sincelab.fonts;
+package sincelab.assets.fonts;
 
 import java.awt.Font;
 import java.io.InputStream;
