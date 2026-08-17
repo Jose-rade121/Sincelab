@@ -3,9 +3,6 @@ package sincelab;
 
 import sincelab.ui.mainWindow;
 
-
-
-
 /**
  *
  * @author josee

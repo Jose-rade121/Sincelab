@@ -26,6 +26,7 @@ import java.awt.Image;
 
 
 public final class mainWindow extends JFrame{
+   
     public mainWindow() {  
         
         ImageIcon icon = new ImageIcon(
