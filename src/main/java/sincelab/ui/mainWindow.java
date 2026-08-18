@@ -23,12 +23,25 @@ import java.awt.Image;
  *
  * @author josee
  */
+private Header header;
 
 
 public final class mainWindow extends JFrame{
-   
+    
+    public static Color background_color;
+    
+    public void background(){
+        
+        getContentPane().setBackground(Themes.background_c);
+        getContentPane().revalidate();
+        getContentPane().repaint();
+    }
+    
+        
     public mainWindow() {  
         
+        Header header = new Header(this);
+       
         ImageIcon icon = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/icon.png")
         ); 
@@ -37,10 +50,10 @@ public final class mainWindow extends JFrame{
         setSize(1280,720);  // Genera el tamaño.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
-        getContentPane().setBackground(new Color(226,230,235)); //Cambia el color del fondo.
           
         
-        add(new Header(), BorderLayout.NORTH);
-        setVisible(true); //Muestra la ventana.
+        add(header, BorderLayout.NORTH);
+        background();
+        setVisible(true); //Muestra la ventana.   
     }
 }
