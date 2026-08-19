@@ -38,7 +38,7 @@ public class Header extends JPanel{
         /* Codigo del modo claro/oscuro */
         
         ImageIcon colorMode = new ImageIcon(
-                getClass().getResource("/sincelab/assets/icons/moon_black.png")
+                getClass().getResource("/sincelab/assets/icons/astronaunt-icon.png")
         );
 
         JPanel colorsPanel = new JPanel(
@@ -56,7 +56,7 @@ public class Header extends JPanel{
         colorsPanel.setOpaque(false);
         colorsPanel.add(colors);
         
-       
+        
         
        
         
