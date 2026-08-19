@@ -14,9 +14,9 @@ public class Themes {
     
     public static void lightMode(){
         darkMode = false;
-        backgroundC = new Color(226,230,235);
-        fontsBarC = Color.WHITE;
-        titleBar = new Color(59,130,246);
+        backgroundC = new Color(172,173,188);
+        fontsBarC = new Color(155,158,206);
+        titleBar = new Color(71,59,240);
     }
     
     
