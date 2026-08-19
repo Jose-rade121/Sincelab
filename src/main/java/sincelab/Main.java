@@ -1,7 +1,7 @@
 package sincelab;
 
 
-import sincelab.ui.mainWindow;
+import sincelab.ui.MainWindow;
 
 /**
  *
@@ -11,7 +11,7 @@ public class Main {
     public static void main(String [] args){
         
    
-        new mainWindow();
+        new MainWindow();
 
     }
 }

@@ -5,7 +5,7 @@ package sincelab.ui;
 import java.awt.BorderLayout;
 import javax.swing.*;
 import java.awt.Color;
-import java.awt.Image;
+
 
 
 
@@ -23,24 +23,23 @@ import java.awt.Image;
  *
  * @author josee
  */
-private Header header;
 
-
-public final class mainWindow extends JFrame{
+public final class MainWindow extends JFrame{
     
-    public static Color background_color;
+    private Header header;
+    public static Color backgroundColor;
     
     public void background(){
         
-        getContentPane().setBackground(Themes.background_c);
+        getContentPane().setBackground(Themes.backgroundC);
         getContentPane().revalidate();
         getContentPane().repaint();
     }
     
         
-    public mainWindow() {  
+    public MainWindow() {  
         
-        Header header = new Header(this);
+        header  = new Header(this);
        
         ImageIcon icon = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/icon.png")

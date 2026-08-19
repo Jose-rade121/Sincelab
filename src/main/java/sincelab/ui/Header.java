@@ -19,44 +19,42 @@ import javax.swing.JLabel;
 
 public class Header extends JPanel{
     
-    private mainWindow mainWindow;
+    private MainWindow mainWindow;
     
     
-    private void change_theme(JLabel title,JLabel about){
-            title.setForeground(Themes.fonts_bar_c);
-            about.setForeground(Themes.fonts_bar_c);  
-            setBackground(Themes.title_bar);
+    private void changeTheme(JLabel title,JLabel about){
+            title.setForeground(Themes.fontsBarC);
+            about.setForeground(Themes.fontsBarC);  
+            setBackground(Themes.titleBar);
     }
     
+
     
-    
-    public boolean Darkmode;
-    
-    public Header(mainWindow mainWindow){
+    public Header(MainWindow mainWindow){
         
         this.mainWindow = mainWindow;
         
         
         /* Codigo del modo claro/oscuro */
         
-        ImageIcon Colormode = new ImageIcon(
+        ImageIcon colorMode = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/moon_black.png")
         );
 
-        JPanel colorspanel = new JPanel(
+        JPanel colorsPanel = new JPanel(
                 new FlowLayout(FlowLayout.RIGHT,20,10)
         ); 
 
         JButton colors = new JButton();
-        colors.setIcon(Colormode);       
+        colors.setIcon(colorMode);       
         colors.setPreferredSize(new Dimension(40,40));
         colors.setBorderPainted(false);
         colors.setContentAreaFilled(false);
         colors.setFocusPainted(false);
         colors.setVerticalAlignment(colors.CENTER);
         
-        colorspanel.setOpaque(false);
-        colorspanel.add(colors);
+        colorsPanel.setOpaque(false);
+        colorsPanel.add(colors);
         
        
         
@@ -67,8 +65,7 @@ public class Header extends JPanel{
             Codigo del Titulo
         */
         
-        principalFont fonttype;
-        fonttype = new principalFont();
+        PrincipalFont fontType = new PrincipalFont();
         
         
         
@@ -76,7 +73,7 @@ public class Header extends JPanel{
         //Border border = BorderFactory.createLineBorder(new Color(59,130,246),3);
         title.setText("SINCELAB");
         title.setForeground(Color.WHITE);
-        title.setFont(fonttype.principalFont(fonttype.BESTIME, 0, 20)); //Selecciona la fuente.
+        title.setFont(fontType.getFont(fontType.BESTIME, 0, 20)); //Selecciona la fuente.
         title.setBorder(
                 BorderFactory.createEmptyBorder(0,20,0,0)
         );
@@ -91,7 +88,7 @@ public class Header extends JPanel{
         JLabel about = new JLabel();
         about.setText("About");
         about.setForeground(Color.WHITE);
-        about.setFont(fonttype.principalFont(fonttype.HEY_COMIC, 0, 16));
+        about.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 16));
         about.setHorizontalAlignment(about.RIGHT);
         about.setBorder(
                 BorderFactory.createEmptyBorder(0, 0, 0, 100)
@@ -109,18 +106,18 @@ public class Header extends JPanel{
         setBackground(new Color(59,130,246));
         add(title, BorderLayout.WEST);
         add(about);
-        add(colorspanel, BorderLayout.EAST);
+        add(colorsPanel, BorderLayout.EAST);
         
         //Aqui lee si presiona el boton y hace el cambio de modo
         colors.addActionListener(e -> {
             
-            if(!Themes.Darkmode){
-                Themes.black_m();
+            if(!Themes.darkMode){
+                Themes.blackMode();
             } else {
-                Themes.light_m();
+                Themes.lightMode();
             }
  
-            change_theme(title,about);  
+            changeTheme(title,about);  
             mainWindow.background();
         });
     }

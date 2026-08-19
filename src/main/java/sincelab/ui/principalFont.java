@@ -4,13 +4,13 @@ import java.awt.Font;
 import java.io.InputStream;
 
 
-public class principalFont{
+public class PrincipalFont{
     
     public Font font = null;
     public String BESTIME = "/sincelab/assets/fonts/Bestime.ttf";
     public String HEY_COMIC = "/sincelab/assets/fonts/Hey_Comic.ttf";
     
-    public Font principalFont(String fontName, int style, float size){
+    public Font getFont(String fontName, int style, float size){
      
         try{
             InputStream data = getClass().getResourceAsStream(fontName);
