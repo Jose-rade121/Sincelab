@@ -16,19 +16,29 @@ git clone https://github.com/Jose-rade121/Sincelab.git
 ```
 SINCELAB
 |-src
-   |-main
-     |-java
-       |-com
-         |-group
-          |-sincelab
-            |-assets
-              |-fonts
-            |-Main.java
-|-pom.xml
+|  |-java
+|    |-ui
+|     |-Header.java
+|     |-MainWindow.java
+|     |-PrincipalFont.java
+|     |-Themes.java
+|    |-Main.java
+|  |-resources
+|    |-fonts
+|      |-Bestime.otf
+|      |-Bestime.ttf
+|      |-Hey_Comic.otf
+|      |-Hey_Comic.ttf
+|    |-icons
+|      |-astronaunt-icon.png
+|      |-guardado.png
+|      |-icon.png
+|      |-moon_black.png
+|      |-moon_white.png
+|-.gitignore
 |-README.md
 |-nb-configuration.xml
-|-.gitignore
-
+|-pom.xml
 ```
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
 
