@@ -2,6 +2,7 @@ package sincelab;
 
 
 import sincelab.ui.MainWindow;
+import sincelab.storage.FolderCreate;
 
 /**
  *
@@ -10,7 +11,7 @@ import sincelab.ui.MainWindow;
 public class Main {
     public static void main(String [] args){
         
-   
+        new FolderCreate();
         new MainWindow();
 
     }
