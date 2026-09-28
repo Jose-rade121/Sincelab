@@ -10,6 +10,8 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import sincelab.ui.AboutWindow;
 
 /**
  *
@@ -19,20 +21,23 @@ import javax.swing.JLabel;
 
 public class Header extends JPanel{
     
-    private MainWindow mainWindow;
+    private final Themed window;
     
-    
-    private void changeTheme(JLabel title,JLabel about){
-            title.setForeground(Themes.fontsBarC);
-            about.setForeground(Themes.fontsBarC);  
-            setBackground(Themes.titleBar);
+    private void changeTheme(JLabel title,JPanel about){
+        title.setForeground(Themes.fontsBarC);
+        about.setForeground(Themes.fontsBarC);  
+        setBackground(Themes.titleBar);
+    }
+   
+    public Header(Themed window){
+        this(window, true);
     }
     
-
+   
     
-    public Header(MainWindow mainWindow){
+    public Header(Themed window, boolean show){
         
-        this.mainWindow = mainWindow;
+        this.window = window;
         
         
         /* Codigo del modo claro/oscuro */
@@ -84,17 +89,23 @@ public class Header extends JPanel{
         /*
             Codigo del about
         */ 
-        //Acomodarlo a la derecha
-        JLabel about = new JLabel();
+        
+        JPanel about_p = new JPanel(
+            new FlowLayout(FlowLayout.RIGHT,20,10)
+        );
+
+        JButton about = new JButton();
+        about.setPreferredSize(new Dimension(100,40));
+        about.setBorderPainted(false);
+        about.setContentAreaFilled(false);
+        about.setFocusPainted(false);
         about.setText("About");
         about.setForeground(Color.WHITE);
         about.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 16));
-        about.setHorizontalAlignment(about.RIGHT);
-        about.setBorder(
-                BorderFactory.createEmptyBorder(0, 0, 0, 100)
-        );
+        about.setHorizontalAlignment(about.CENTER); 
         
-        
+        about_p.setOpaque(false);
+        about_p.add(about);
         
         
         
@@ -105,8 +116,10 @@ public class Header extends JPanel{
         setLayout(new BorderLayout());
         setBackground(new Color(59,130,246));
         add(title, BorderLayout.WEST);
-        add(about);
+        add(about_p);
         add(colorsPanel, BorderLayout.EAST);
+        
+        
         
         //Aqui lee si presiona el boton y hace el cambio de modo
         colors.addActionListener(e -> {
@@ -117,9 +130,16 @@ public class Header extends JPanel{
                 Themes.lightMode();
             }
  
-            changeTheme(title,about);  
-            mainWindow.background();
+            changeTheme(title,about_p);  
+            this.window.background();
         });
+
+        about.addActionListener( e -> {
+        
+            new AboutWindow();
+        
+        });
+        
     }
 }
 
