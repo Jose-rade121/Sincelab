@@ -62,6 +62,7 @@ git status  #Que nuevos cambios hay
 ```bash
 git add .   #Prepara los cambios
 ```
+
 ```bash
 git commit -m "Descripcion de los cambios"
 ```
