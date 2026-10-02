@@ -35,7 +35,7 @@ Comprobamos que todo quedo bien:
 ```bash
 git remote -v
 ```
-<img src = "" width>
+<img src = "src/main/java/sincelab/resources/sincelab/assets/repo_images/GIT_REMOTE.PNG" width = 100%>
 
 En caso de que el comando `remote` no muestre nada escribiremos:
 ```bash
