@@ -98,6 +98,48 @@ git push    #Envia a GitHub
 ## Estructura del proyecto
 
 <!-- TREE:START -->
+```text
+Sincelab/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── sincelab/
+│       │       ├── storage/
+│       │       │   ├── FolderCreate.java
+│       │       │   └── Users.java
+│       │       ├── ui/
+│       │       │   ├── AboutWindow.java
+│       │       │   ├── Header.java
+│       │       │   ├── MainWindow.java
+│       │       │   ├── PrincipalFont.java
+│       │       │   ├── Themed.java
+│       │       │   └── Themes.java
+│       │       └── Main.java
+│       └── resources/
+│           └── sincelab/
+│               └── assets/
+│                   ├── fonts/
+│                   │   ├── Bestime.otf
+│                   │   ├── Bestime.ttf
+│                   │   ├── Hey_Comic.otf
+│                   │   └── Hey_Comic.ttf
+│                   ├── icons/
+│                   │   ├── astronaunt-icon.png
+│                   │   ├── guardado.png
+│                   │   ├── icon.png
+│                   │   ├── moon_black.png
+│                   │   └── moon_white.png
+│                   └── repo_images/
+│                       ├── GIT _REMOTE.PNG
+│                       ├── GIT_ADD_COMMIT.PNG
+│                       ├── GIT_PULL.PNG
+│                       ├── GIT_PUSH.PNG
+│                       └── GIT_STATUS.PNG
+├── .gitignore
+├── nb-configuration.xml
+├── pom.xml
+└── README.md
+```
 <!-- TREE:END -->
 
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
