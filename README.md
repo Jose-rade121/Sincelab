@@ -35,7 +35,7 @@ Comprobamos que todo quedo bien:
 ```bash
 git remote -v
 ```
-<img src = "src/main/java/sincelab/resources/sincelab/assets/repo_images/GIT_REMOTE.PNG" width = 100%>
+<img src = "src/main/resources/sincelab/assets/repo_images/GIT _REMOTE.PNG" width = 100%>
 
 En caso de que el comando `remote` no muestre nada escribiremos:
 ```bash
@@ -55,7 +55,9 @@ git remote set-url origin URL
 ```bash
 git status  #Que nuevos cambios hay
 ```
-<img src>
+<img src = "src/main/resources/sincelab/assets/repo_images/GIT_STATUS.PNG" width = 100%>
+
+---
 
 ```bash
 git add .   #Prepara los cambios
@@ -63,24 +65,30 @@ git add .   #Prepara los cambios
 ```bash
 git commit -m "Descripcion de los cambios"
 ```
-<img src>
+<img src = "src/main/resources/sincelab/assets/repo_images/GIT_ADD_COMMIT.PNG" width = 100%>
+
+---
 
 ```bash
 git push    #Envia a GitHub
 ```
+<img src = "src/main/resources/sincelab/assets/repo_images/GIT_PUSH.PNG" width = 100%>
+
+---
+
 ```bash
 git pull    #Trae los nuevos cambios
 ```
-
+<img src = "src/main/resources/sincelab/assets/repo_images/GIT_PUSH.PNG" width = 100%>
 
 
 #### Flujo de trabajo:
 ```bash
+git pull    #Trae los nuevos cambios
 git status  #Que nuevos cambios hay
 git add .   #Prepara los cambios
 git commit -m "Descripcion de los cambios"
 git push    #Envia a GitHub
-git pull    #Trae los nuevos cambios
 ```
 
 
@@ -88,33 +96,9 @@ git pull    #Trae los nuevos cambios
 
 ## Estructura del proyecto
 
-```
-SINCELAB
-|-src
-|  |-java
-|    |-ui
-|     |-Header.java
-|     |-MainWindow.java
-|     |-PrincipalFont.java
-|     |-Themes.java
-|    |-Main.java
-|  |-resources
-|    |-fonts
-|      |-Bestime.otf
-|      |-Bestime.ttf
-|      |-Hey_Comic.otf
-|      |-Hey_Comic.ttf
-|    |-icons
-|      |-astronaunt-icon.png
-|      |-guardado.png
-|      |-icon.png
-|      |-moon_black.png
-|      |-moon_white.png
-|-.gitignore
-|-README.md
-|-nb-configuration.xml
-|-pom.xml
-```
+<!-- TREE:START -->
+<!-- TREE:END -->
+
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
 
 ![Pixel Cat](https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Pixel%20Cat.gif) 
