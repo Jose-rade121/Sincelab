@@ -92,6 +92,9 @@ git commit -m "Descripcion de los cambios"
 git push    #Envia a GitHub
 ```
 
+>[!WARNING]
+>Hacer el pull es de vital importancia, si no se hace y se fuerza el envio de la informacion esto podria borrar Archivos importantes.
+
 
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
 
@@ -143,5 +146,32 @@ Sincelab/
 <!-- TREE:END -->
 
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
+
+### Descripcion de las clases
+
+<h3>Carpeta java</h3>
+
+* Main --> Archivo Principal de la aplicación; en este llama a la ventana principal y a los elementos de storage.
+
+<h3>Carpeta Ui</h3>
+
+* AboutWindow --> Ventana de la informacion de la aplicacion.
+
+* Header --> Encabezado de la aplicacion.
+
+* MainWindow --> Ventana principal, la que se abre al principio.
+
+* PrincipalFont --> Carga las fuentes de letras.
+
+* Themed --> Permite el cambio entre ventanas.
+
+* Themes --> Modos de visualizacion claro y oscuro
+
+<h3><strong>Carpeta Storage</strong></h3>
+
+* FolderCreate --> Crea la carpeta donde se almacenan la informacion.
+
+* Users --> Informacion de los usuarios.
+
 
 ![Pixel Cat](https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Pixel%20Cat.gif) 
