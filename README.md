@@ -2,6 +2,8 @@
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
 
+<img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
+
 ## Inicializar el repositorio
 
 Para inicializar el repositorio es **necesario** [instalar](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git) `Git`;
@@ -33,7 +35,7 @@ Comprobamos que todo quedo bien:
 ```bash
 git remote -v
 ```
-<img href = "">
+<img src = "" width>
 
 En caso de que el comando `remote` no muestre nada escribiremos:
 ```bash
@@ -44,7 +46,42 @@ Si muestra una `URL` Equivocada:
 git remote set-url origin URL
 ```
 
+<img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
 
+## Añadir cambios al proyecto
+
+### Terminal:
+
+```bash
+git status  #Que nuevos cambios hay
+```
+<img src>
+
+```bash
+git add .   #Prepara los cambios
+```
+```bash
+git commit -m "Descripcion de los cambios"
+```
+<img src>
+
+```bash
+git push    #Envia a GitHub
+```
+```bash
+git pull    #Trae los nuevos cambios
+```
+
+
+
+#### Flujo de trabajo:
+```bash
+git status  #Que nuevos cambios hay
+git add .   #Prepara los cambios
+git commit -m "Descripcion de los cambios"
+git push    #Envia a GitHub
+git pull    #Trae los nuevos cambios
+```
 
 
 <img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
