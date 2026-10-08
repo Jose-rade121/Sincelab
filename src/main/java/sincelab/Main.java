@@ -1,8 +1,9 @@
 package sincelab;
 
 
-import sincelab.ui.MainWindow;
-import sincelab.storage.FolderCreate;
+import sincelab.view.MainWindow;
+import sincelab.storage.Archive;
+import sincelab.view.UiLogin;
 
 /**
  *
@@ -11,8 +12,9 @@ import sincelab.storage.FolderCreate;
 public class Main {
     public static void main(String [] args){
         
-        new FolderCreate();
+        //new Archive(); -> Error por q le faltan 2 strings
         new MainWindow();
+        //new UiLogin();
   
     }
 }

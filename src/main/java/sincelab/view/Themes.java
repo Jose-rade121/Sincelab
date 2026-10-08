@@ -1,4 +1,4 @@
-package sincelab.ui;
+package sincelab.view;
 import java.awt.Color;
 
 /**

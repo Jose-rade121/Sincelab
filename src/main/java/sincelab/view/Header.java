@@ -1,4 +1,4 @@
-package sincelab.ui;
+package sincelab.view;
 
 
 import java.awt.BorderLayout;
@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import sincelab.ui.AboutWindow;
+import sincelab.view.AboutWindow;
 
 /**
  *
@@ -99,7 +99,7 @@ public class Header extends JPanel{
         about.setBorderPainted(false);
         about.setContentAreaFilled(false);
         about.setFocusPainted(false);
-        about.setText("About");
+        about.setText("Acerca");
         about.setForeground(Color.WHITE);
         about.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 16));
         about.setHorizontalAlignment(about.CENTER); 
