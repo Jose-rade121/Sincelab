@@ -6,6 +6,13 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.Shape;
+import java.awt.geom.Area;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.RoundRectangle2D;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -22,7 +29,7 @@ import sincelab.view.AboutWindow;
 public class Header extends JPanel{
     
     private final Themed window;
-    
+
     private void changeTheme(JLabel title,JPanel about){
         title.setForeground(Themes.fontsBarC);
         about.setForeground(Themes.fontsBarC);  
@@ -32,8 +39,6 @@ public class Header extends JPanel{
     public Header(Themed window){
         this(window, true);
     }
-    
-   
     
     public Header(Themed window, boolean show){
         
@@ -135,7 +140,7 @@ public class Header extends JPanel{
         });
 
         about.addActionListener( e -> {
-        
+            //new UiLogin();
             new AboutWindow();
         
         });

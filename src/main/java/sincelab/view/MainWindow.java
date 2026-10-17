@@ -35,9 +35,11 @@ public final class MainWindow extends JFrame implements Themed{
         getContentPane().revalidate();
         getContentPane().repaint();
     }
+            
     
-        
     public MainWindow() {  
+        
+        
    
         PrincipalFont fontType = new PrincipalFont();
  
