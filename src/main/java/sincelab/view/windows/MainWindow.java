@@ -1,4 +1,4 @@
-package sincelab.view;
+package sincelab.view.windows;
 
 
 
@@ -7,8 +7,12 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-
-
+import java.awt.Window;
+import sincelab.view.Header;
+import sincelab.view.Themed;
+import sincelab.view.Themes;
+import sincelab.view.PrincipalFont;
+import sincelab.view.curses.AlgLineal;
 
 
 
@@ -86,13 +90,25 @@ public final class MainWindow extends JFrame implements Themed{
         
         JPanel fisica1 = new JPanel();
         fisica1.setPreferredSize(new Dimension(350,250));
-
+        
         
         JPanel humanidades = new JPanel();
         humanidades.setPreferredSize(new Dimension(350,250));
        
         JPanel algLineal = new JPanel();
         algLineal.setPreferredSize(new Dimension(350,250));
+        
+        JButton alg = new JButton();
+        alg.setBounds(210, 210, 30, 30);
+        add(alg);
+            
+        alg.addActionListener(e ->{
+            new AlgLineal();
+            //Window ventana = SwingUtilities.getWindowAncestor(this);
+            //if(ventana != null) ventana.dispose();
+            dispose();
+        });
+        
         
         JPanel puntuaciones = new JPanel();
         puntuaciones.setPreferredSize(new Dimension(350,250));
@@ -106,6 +122,7 @@ public final class MainWindow extends JFrame implements Themed{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
           
+        
 
         header  = new Header(this, false);
         add(header, BorderLayout.NORTH);

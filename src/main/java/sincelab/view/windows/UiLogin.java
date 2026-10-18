@@ -1,4 +1,4 @@
-package sincelab.view;
+package sincelab.view.windows;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -18,6 +18,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import sincelab.view.PrincipalFont;
+import sincelab.view.Themed;
+import sincelab.view.Themes;
 
 
 

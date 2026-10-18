@@ -1,9 +1,12 @@
-package sincelab.view;
+package sincelab.view.windows;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import sincelab.view.Header;
+import sincelab.view.Themed;
+import sincelab.view.Themes;
 
 /**
  *
@@ -30,7 +33,7 @@ public final class AboutWindow extends JFrame implements Themed{
         setIconImage(icon.getImage());
         setTitle("ABOUT"); //Le da un titulo.
         setSize(1280,720);  // Genera el tamaño.
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
           
         header = new Header(this, false);

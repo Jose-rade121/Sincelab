@@ -1,9 +1,10 @@
 package sincelab;
 
 
-import sincelab.view.MainWindow;
+import sincelab.view.windows.MainWindow;
 import sincelab.storage.Archive;
-import sincelab.view.UiLogin;
+import sincelab.view.windows.UiLogin;
+import sincelab.view.curses.AlgLineal;
 
 /**
  *
@@ -13,6 +14,7 @@ public class Main {
     public static void main(String [] args){
         
         //new Archive(); -> Error por q le faltan 2 strings
+        //new AlgLineal();
         new MainWindow();
         new UiLogin();
         //new UiLogin();

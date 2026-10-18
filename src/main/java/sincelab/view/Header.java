@@ -10,6 +10,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.Shape;
+import java.awt.Window;
 import java.awt.geom.Area;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
@@ -18,7 +19,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import sincelab.view.AboutWindow;
+import javax.swing.SwingUtilities;
+import sincelab.view.windows.AboutWindow;
+import sincelab.view.windows.MainWindow;
 
 /**
  *
@@ -76,7 +79,7 @@ public class Header extends JPanel{
         */
         
         PrincipalFont fontType = new PrincipalFont();
-        
+        Themes te = new Themes();
         
         
         JLabel title = new JLabel();
@@ -84,13 +87,26 @@ public class Header extends JPanel{
         title.setText("SINCELAB");
         title.setForeground(Color.WHITE);
         title.setFont(fontType.getFont(fontType.BESTIME, 0, 20)); //Selecciona la fuente.
+        /*
         title.setBorder(
                 BorderFactory.createEmptyBorder(0,20,0,0)
         );
+        */
+        
+        JButton titulo = new JButton();
+        titulo.setBounds(0,0,20,40);
+        titulo.setBorderPainted(false);
+        titulo.setFocusPainted(false);
+        titulo.setContentAreaFilled(false);
+        titulo.add(title);
+        titulo.addActionListener(e -> {
+            new MainWindow();
+            Window ventana = SwingUtilities.getWindowAncestor(this);
+            if(ventana != null) ventana.dispose();
+        });
         
         
-        
-        
+      
         /*
             Codigo del about
         */ 
@@ -120,7 +136,7 @@ public class Header extends JPanel{
         setPreferredSize(new Dimension(1280,60)); //Aqui se le asigna el tamaño al panel
         setLayout(new BorderLayout());
         setBackground(new Color(59,130,246));
-        add(title, BorderLayout.WEST);
+        add(titulo, BorderLayout.WEST);
         add(about_p);
         add(colorsPanel, BorderLayout.EAST);
         
@@ -142,7 +158,8 @@ public class Header extends JPanel{
         about.addActionListener( e -> {
             //new UiLogin();
             new AboutWindow();
-        
+            Window ventana = SwingUtilities.getWindowAncestor(this);
+            if(ventana != null) ventana.dispose();
         });
         
     }
