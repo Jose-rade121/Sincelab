@@ -9,6 +9,8 @@ public class PrincipalFont{
     public Font font = null;
     public String BESTIME = "/sincelab/assets/fonts/Bestime.ttf";
     public String HEY_COMIC = "/sincelab/assets/fonts/Hey_Comic.ttf";
+    public String STAY_WITH_ME = "/sincelab/assets/fonts/Stay_With_Me.otf";
+    public String NUNITO_BLACK = "/sincelab/assets/fonts/Nunito-Black.ttf";
     
     public Font getFont(String fontName, int style, float size){
      
