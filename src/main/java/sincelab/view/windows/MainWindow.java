@@ -12,7 +12,7 @@ import sincelab.view.Header;
 import sincelab.view.Themed;
 import sincelab.view.Themes;
 import sincelab.view.PrincipalFont;
-import sincelab.view.curses.AlgLineal;
+import sincelab.view.curses.algebralineal.AlgLineal;
 
 
 

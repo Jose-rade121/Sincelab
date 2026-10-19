@@ -22,6 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import sincelab.view.windows.AboutWindow;
 import sincelab.view.windows.MainWindow;
+import sincelab.view.windows.UiLogin;
 
 /**
  *
@@ -145,6 +146,11 @@ public class Header extends JPanel{
         //Aqui lee si presiona el boton y hace el cambio de modo
         colors.addActionListener(e -> {
             
+            new UiLogin();
+            
+            /*
+            Esto no provisionalmente
+            
             if(!Themes.darkMode){
                 Themes.blackMode();
             } else {
@@ -153,6 +159,9 @@ public class Header extends JPanel{
  
             changeTheme(title,about_p);  
             this.window.background();
+            */
+            
+            
         });
 
         about.addActionListener( e -> {

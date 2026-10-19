@@ -4,7 +4,8 @@ package sincelab;
 import sincelab.view.windows.MainWindow;
 import sincelab.storage.Archive;
 import sincelab.view.windows.UiLogin;
-import sincelab.view.curses.AlgLineal;
+import sincelab.view.curses.algebralineal.AlgLineal;
+import sincelab.view.curses.algebralineal.Vectores;
 
 /**
  *
@@ -15,9 +16,9 @@ public class Main {
         
         //new Archive(); -> Error por q le faltan 2 strings
         //new AlgLineal();
-        new MainWindow();
-        new UiLogin();
+        //new MainWindow();
         //new UiLogin();
+        new Vectores();
   
     }
 }
