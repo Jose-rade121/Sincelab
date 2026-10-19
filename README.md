@@ -125,10 +125,13 @@ Sincelab/
 │                   ├── fonts/
 │                   │   ├── Bestime.otf
 │                   │   ├── Bestime.ttf
-│                   │   ├── Hey_Comic.otf
-│                   │   └── Hey_Comic.ttf
+│                   │   ├── Hey_Comic.ttf
+│                   │   ├── Nunito-Black.ttf
+│                   │   └── Stay_With_Me.otf
 │                   ├── icons/
 │                   │   ├── astronaunt-icon.png
+│                   │   ├── Astronauta.png
+│                   │   ├── fondo.jfif
 │                   │   ├── guardado.png
 │                   │   ├── icon.png
 │                   │   ├── moon_black.png
