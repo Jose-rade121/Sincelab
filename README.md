@@ -111,13 +111,19 @@ Sincelab/
 │       │       │   ├── Archive.java
 │       │       │   └── Users.java
 │       │       ├── view/
-│       │       │   ├── AboutWindow.java
+│       │       │   ├── curses/
+│       │       │   │   └── algebralineal/
+│       │       │   │       ├── AlgLineal.java
+│       │       │   │       ├── Matrices.java
+│       │       │   │       └── Vectores.java
+│       │       │   ├── windows/
+│       │       │   │   ├── AboutWindow.java
+│       │       │   │   ├── MainWindow.java
+│       │       │   │   └── UiLogin.java
 │       │       │   ├── Header.java
-│       │       │   ├── MainWindow.java
 │       │       │   ├── PrincipalFont.java
 │       │       │   ├── Themed.java
-│       │       │   ├── Themes.java
-│       │       │   └── UiLogin.java
+│       │       │   └── Themes.java
 │       │       └── Main.java
 │       └── resources/
 │           └── sincelab/
