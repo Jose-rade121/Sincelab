@@ -23,6 +23,7 @@ public class Vector3D{
     public double getZ(){return z;}
     
     
+    
     public double magnitud(){
         return Math.sqrt(x * x + y * y + z * z);
     }
@@ -34,12 +35,12 @@ public class Vector3D{
     public Vector3D productoCruz(Vector3D o){
         return new Vector3D(
                 y * o.z - z * o.y,
-                z * o.z - x *o.z,
+                z * o.x - x *o.z,
                 x * o.y - y * o.x
         );
     }
     
-    private double calcularAngulo(Vector3D o){
+    public double calcularAngulo(Vector3D o){
         
         double magnitudes = this.magnitud() * o.magnitud();
         

@@ -31,6 +31,7 @@ public class Vectores extends JFrame implements Themed {
     private JButton enviar;
     private Vector3D magnitudv1, magnitudv2;
     private JLabel resultado;
+    private JLabel resultado2;
     
     
     public void background(){
@@ -53,20 +54,37 @@ public class Vectores extends JFrame implements Themed {
         double z = Double.parseDouble(cz.getText().trim());
         return new Vector3D(x,y,z);
     }
+    /*
+    private double leerNumero(JTextField campo){
+        return Double.parseDouble(campo.getText().trim().replace(',', '.'));
+    }
+    */
+    /*
+    private Vector3D leerVector(JTextField cx, JTextField cy, JTextField cz){
+        return new Vector3D(leerNumero(cx), leerNumero(cy), leerNumero(cz));
+    }
+    */
     
-   
     
     public void sendInfo(){
         
 
         try {
-           
+
             Vector3D v1 = leerVector(x1,y1,z1);
             Vector3D v2 = leerVector(x2,y2,z2);
+
+            resultado.setText(String.format("Angulo entre vectores: %.2f grados" , 
+                v1.calcularAngulo(v2))
+            );
             
-            resultado.setText("<html>"
-             + "Angulo entre vectores: " + v1.productoPunto(v2) + "<br>"
-             + "</html>");
+            Vector3D cruz = v1.productoCruz(v2);
+            String datos = String.format("(%.1f,%.1f,%.1f)",
+                    cruz.getX(), cruz.getY(), cruz.getZ()
+            );
+            
+            resultado2.setText("Producto cruz: " + datos );
+                    
             
             System.out.println("ROGER!!!");
                 
@@ -125,9 +143,17 @@ public class Vectores extends JFrame implements Themed {
         
         resultado = new JLabel();
         resultado.setBounds(30,300,440,200);
-        resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 18));
+        resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 25));
         resultado.setVerticalAlignment(JLabel.TOP);
         posiciones.add(resultado);
+        
+        resultado2 = new JLabel();
+        resultado2.setBounds(30,350,440,200);
+        resultado2.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 25));
+        resultado2.setVerticalAlignment(JLabel.TOP);
+        posiciones.add(resultado2);
+        
+        
         
         posiciones.setLayout(null);
         posiciones.add(v1);
