@@ -99,13 +99,17 @@ public final class MainWindow extends JFrame implements Themed{
         algLineal.setPreferredSize(new Dimension(350,250));
         
         JButton alg = new JButton();
-        alg.setBounds(210, 210, 30, 30);
+        alg.setText("Algebra Lineal");
+        alg.setBorderPainted(false);
+        alg.setFocusPainted(false);
+        alg.setForeground(new Color(255, 255, 255));
+        alg.setBackground(new Color(111, 94, 171));
+        alg.setBounds(95,260,140,38);
+        
         add(alg);
             
         alg.addActionListener(e ->{
             new AlgLineal();
-            //Window ventana = SwingUtilities.getWindowAncestor(this);
-            //if(ventana != null) ventana.dispose();
             dispose();
         });
         
