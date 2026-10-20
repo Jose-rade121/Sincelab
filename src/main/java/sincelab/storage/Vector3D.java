@@ -23,9 +23,31 @@ public class Vector3D{
     public double getZ(){return z;}
     
     
-    public void caluculoAngulo(){
-        
+    public double magnitud(){
+        return Math.sqrt(x * x + y * y + z * z);
     }
-     
+    
+    public double productoPunto(Vector3D o){
+        return x * o.x + y * o.y + z * o.z;
+    }
+    
+    public Vector3D productoCruz(Vector3D o){
+        return new Vector3D(
+                y * o.z - z * o.y,
+                z * o.z - x *o.z,
+                x * o.y - y * o.x
+        );
+    }
+    
+    private double calcularAngulo(Vector3D o){
+        
+        double magnitudes = this.magnitud() * o.magnitud();
+        
+        double cos = this.productoPunto(o) / magnitudes;
+        cos = Math.max(-1.0, Math.min(1.0, cos));
+        
+        return Math.toDegrees(Math.acos(cos));
+                  
+    }
     
 }

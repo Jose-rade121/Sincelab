@@ -29,6 +29,8 @@ public class Vectores extends JFrame implements Themed {
     private JTextField x1,y1,z1;
     private JTextField x2,y2,z2; 
     private JButton enviar;
+    private Vector3D magnitudv1, magnitudv2;
+    private JLabel resultado;
     
     
     public void background(){
@@ -52,13 +54,20 @@ public class Vectores extends JFrame implements Themed {
         return new Vector3D(x,y,z);
     }
     
+   
+    
     public void sendInfo(){
         
+
         try {
            
             Vector3D v1 = leerVector(x1,y1,z1);
             Vector3D v2 = leerVector(x2,y2,z2);
-        
+            
+            resultado.setText("<html>"
+             + "Angulo entre vectores: " + v1.productoPunto(v2) + "<br>"
+             + "</html>");
+            
             System.out.println("ROGER!!!");
                 
         } catch (NumberFormatException e){
@@ -79,31 +88,46 @@ public class Vectores extends JFrame implements Themed {
         PrincipalFont fontType = new PrincipalFont();
         
         
+        JLabel titulo = new JLabel();
+        titulo.setText("VECTORES");
+        titulo.setForeground(new Color(59,130,246));
+        titulo.setFont(fontType.getFont(fontType.BESTIME, 0 , 20));
+        titulo.setHorizontalAlignment(JLabel.CENTER);
+        titulo.setBounds(0, 50 , 500 , 80);
+        
+        posiciones.add(titulo);
+        
         JLabel v1 = new JLabel();
         v1.setText("V1 = ");
-        v1.setBounds(140, 200, 50, 25);
-        x1 = crearCampo(posiciones, 190 ,200);
-        y1 = crearCampo(posiciones, 250 ,200);
-        z1 = crearCampo(posiciones, 310 ,200);
+        v1.setBounds(112, 150, 45, 28);
+        x1 = crearCampo(posiciones, 157 , 150);
+        y1 = crearCampo(posiciones, 237 , 150);
+        z1 = crearCampo(posiciones, 317 , 150);
         
 
     
         JLabel v2 = new JLabel();
         v2.setText("V2 = ");
-        v2.setBounds(140, 240, 50, 25);
-        x2 = crearCampo(posiciones, 190 ,240);
-        y2 = crearCampo(posiciones, 250 ,240);
-        z2 = crearCampo(posiciones, 310 ,240);
+        v2.setBounds(112, 193, 45, 28);
+        x2 = crearCampo(posiciones, 157 ,193);
+        y2 = crearCampo(posiciones, 237 ,193);
+        z2 = crearCampo(posiciones, 317 ,193);
         
         JButton enviar = new JButton();
         enviar.setText("Enviar");
-        enviar.setBounds(190, 285, 170, 25);
+        enviar.setBounds(112, 246, 275, 32);
         enviar.setBackground(new Color(111, 94, 171));
         enviar.setForeground(new Color(255, 255, 255));
         enviar.setBorderPainted(false);
         enviar.setFocusPainted(false);
         enviar.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 15));
         enviar.addActionListener(e -> sendInfo());
+        
+        resultado = new JLabel();
+        resultado.setBounds(30,300,440,200);
+        resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 18));
+        resultado.setVerticalAlignment(JLabel.TOP);
+        posiciones.add(resultado);
         
         posiciones.setLayout(null);
         posiciones.add(v1);
@@ -119,7 +143,7 @@ public class Vectores extends JFrame implements Themed {
         
         setIconImage(icon.getImage());
         setTitle("VECTORES"); //Le da un titulo.
-        setSize(1280,720);  // Genera el tamaño.
+        setSize(500,720);  // Genera el tamaño.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
           
