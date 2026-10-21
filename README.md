@@ -152,6 +152,7 @@ Sincelab/
 │                       └── GIT_STATUS.PNG
 ├── .gitignore
 ├── nb-configuration.xml
+├── nbactions.xml
 ├── pom.xml
 └── README.md
 ```
