@@ -17,9 +17,9 @@ public class Main {
         
         //new Archive(); -> Error por q le faltan 2 strings
         //new AlgLineal();
-        //new MainWindow();
+        new MainWindow();
         //new UiLogin();
         //new Vectores();
-        new Matrices();
+        //new Matrices();
     }
 }

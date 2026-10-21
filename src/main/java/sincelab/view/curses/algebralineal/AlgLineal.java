@@ -42,17 +42,21 @@ public class AlgLineal extends JFrame implements Themed{
    
         JLabel titulo = new JLabel();
         titulo.setText("Algebra Lineal");
-        titulo.setForeground(new Color(59,130,246));
+        titulo.setForeground(new Color(59,130,246));//(x
         titulo.setFont(fontType.getFont(fontType.BESTIME, 0 ,30));
-        titulo.setBounds(500,95,880,180);
+        titulo.setBounds(0,110,500,50);
+        titulo.setHorizontalAlignment(JLabel.CENTER);
 
         
         JButton matriz = new JButton();
         matriz.setText("Matrices");
+        matriz.setFocusPainted(false);
         matriz.setBorderPainted(false);
-        matriz.setFocusPainted(true);
+        matriz.setBackground(new Color(59,130,246));
+        matriz.setForeground(new Color(255,255,255));
         matriz.setContentAreaFilled(true);
-        matriz.setBounds(390,280,110,80);
+        matriz.setBounds(108,200,130,80);
+        matriz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
         
         matriz.addActionListener(e -> {
             new Matrices();
@@ -62,9 +66,11 @@ public class AlgLineal extends JFrame implements Themed{
         JButton vectores = new JButton();
         vectores.setText("Vectores");
         vectores.setBorderPainted(false);
-        vectores.setFocusPainted(true);
-        vectores.setContentAreaFilled(true);
-        vectores.setBounds(760,280,110,80);
+        vectores.setFocusPainted(false);
+        vectores.setBackground(new Color(59,130,246));
+        vectores.setForeground(new Color(255,255,255));
+        vectores.setBounds(262,200,130,80);
+        vectores.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
         
         vectores.addActionListener(e -> {
             new Vectores();
@@ -85,7 +91,7 @@ public class AlgLineal extends JFrame implements Themed{
         
         setIconImage(icon.getImage());
         setTitle("ALGEBRA LINEAL"); //Le da un titulo.
-        setSize(1280,720);  // Genera el tamaño.
+        setSize(500,720);  // Genera el tamaño.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Aqui le dice q hace el boton de cerrar(existen muchos otros).
         setResizable(false); //Si la pagina se puede cambiar de tamaño o no.
           
