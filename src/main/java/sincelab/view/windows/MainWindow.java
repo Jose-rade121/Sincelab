@@ -1,15 +1,9 @@
 package sincelab.view.windows;
 
-
-
-import java.awt.BorderLayout;
+import java.awt.*;
 import javax.swing.*;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Window;
-import java.util.HashSet;
-import java.util.Set;
+
+
 import sincelab.view.Header;
 import sincelab.view.Themed;
 import sincelab.view.Themes;
@@ -131,8 +125,8 @@ public final class MainWindow extends JFrame implements Themed{
         alg.setFocusPainted(false);
         alg.setForeground(new Color(255, 255, 255));
         alg.setBackground(new Color(111, 94, 171));
-        alg.setBounds(15,300,140,38);
-        algLineal.add(alg);
+        alg.setBounds(415,600,140,38);
+        add(alg); 
         
         alg.addActionListener(e ->{
             new AlgLineal();

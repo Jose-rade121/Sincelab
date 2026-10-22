@@ -1,16 +1,9 @@
 package sincelab.view.curses.algebralineal;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Window;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import java.awt.*;
+import javax.swing.*;
+
+
 import sincelab.view.Header;
 import sincelab.view.PrincipalFont;
 import sincelab.view.Themed;

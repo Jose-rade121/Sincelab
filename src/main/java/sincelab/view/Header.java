@@ -1,25 +1,9 @@
 package sincelab.view;
 
+import java.awt.*;
+import javax.swing.*;
 
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.Shape;
-import java.awt.Window;
-import java.awt.geom.Area;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.RoundRectangle2D;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
+
 import sincelab.view.windows.AboutWindow;
 import sincelab.view.windows.MainWindow;
 import sincelab.view.windows.UiLogin;
