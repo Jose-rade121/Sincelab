@@ -9,6 +9,7 @@ import sincelab.view.Themed;
 import sincelab.view.Themes;
 import sincelab.view.PrincipalFont;
 import sincelab.view.curses.algebralineal.AlgLineal;
+import sincelab.view.curses.matematicas2.Matematicas2;
 
 
 
@@ -78,6 +79,20 @@ public final class MainWindow extends JFrame implements Themed{
         mat.setBounds(15,25,300,20);
         mat.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         matematicas1.add(mat);
+        
+        JButton mate = new JButton();
+        mate.setText("Iniciar");
+        mate.setBorderPainted(false);
+        mate.setFocusPainted(false);
+        mate.setForeground(new Color(255, 255, 255));
+        mate.setBackground(new Color(111, 94, 171));
+        mate.setBounds(95, 320, 140, 38);
+        add(mate);
+
+        mate.addActionListener(e -> {
+        new Matematicas2();
+        dispose();
+        });
         
 
         JPanel fisica1 = new JPanel();
