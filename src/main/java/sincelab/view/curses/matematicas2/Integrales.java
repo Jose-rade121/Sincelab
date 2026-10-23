@@ -4,24 +4,9 @@
  */
 package sincelab.view.curses.matematicas2;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridBagLayout;
-import java.awt.RenderingHints;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import java.awt.*;
+import javax.swing.*;
+
 import sincelab.storage.integrales;
 import sincelab.storage.polinomio;
 import sincelab.view.Header;
@@ -39,7 +24,7 @@ public class Integrales extends JFrame implements Themed {
     private JTextField funcion, limInf, limSup;
     private JTextArea resultado;
  
-    public void background() {
+    public void background() { //Aqui es el proceso de cambio de color la ventana principal 
         getContentPane().setBackground(Themes.backgroundC);
         getContentPane().revalidate();
         getContentPane().repaint();
@@ -78,10 +63,10 @@ public class Integrales extends JFrame implements Themed {
     }
  
     public void sendInfo() {
-        try {
+        try { //el try intenta procesar todo tipo de datos ingresados permitido
             polinomio p = polinomio.parse(funcion.getText());
             double a = Double.parseDouble(limInf.getText().trim().replace(",", "."));
-            double b = Double.parseDouble(limSup.getText().trim().replace(",", "."));
+            double b = Double.parseDouble(limSup.getText().trim().replace(",", ".")); 
  
             
             resultado.setText("f(x) = " + p + "\n" 
@@ -126,11 +111,18 @@ public class Integrales extends JFrame implements Themed {
 
         
         resultado = new JTextArea();
-        resultado.setBounds(30, 110, 950, 145);
+        resultado.setBounds(30, 110, 500, 145);
+        resultado.setLineWrap(true);                 
+        resultado.setWrapStyleWord(true); 
         resultado.setEditable(false); // bloquea que el usuario puedad escribir ajajaj//
         resultado.setOpaque(false); // como java tiene una configuracion rara cuando uno tiene un contenido, decidi poner trasparente el fondo de la frase//
         resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 20));
         contenido.add(resultado);
+        
+        //funcion del teclado 
+        TecDevInt teclado = new TecDevInt(fontType, funcion, limInf, limSup);
+        teclado.setBounds(560, 95, 430, 165);
+        contenido.add(teclado);
         tarjeta.add(contenido);
  
         /*

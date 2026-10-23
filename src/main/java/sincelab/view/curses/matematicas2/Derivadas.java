@@ -4,24 +4,9 @@
  */
 package sincelab.view.curses.matematicas2;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridBagLayout;
-import java.awt.RenderingHints;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import java.awt.*;
+import javax.swing.*;
+
 import sincelab.storage.derivada;
 import sincelab.storage.polinomio;
 import sincelab.view.Header;
@@ -122,11 +107,18 @@ public class Derivadas extends JFrame implements Themed {
         punto = CalcDeV(contenido, "Punto x:", 500, 35, 150, fontType);
  
         resultado = new JTextArea();
-        resultado.setBounds(30, 110, 950, 145);
+        resultado.setBounds(30, 110, 500, 145);
+        resultado.setLineWrap(true);                 
+        resultado.setWrapStyleWord(true);
         resultado.setEditable(false);
         resultado.setOpaque(false);
         resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 20));
         contenido.add(resultado);
+        
+        //teclado 
+        TecDevInt teclado = new TecDevInt(fontType, funcion, punto);
+        teclado.setBounds(560, 95, 430, 165);
+        contenido.add(teclado);
         tarjeta.add(contenido);
  
         /* Clasificacion 

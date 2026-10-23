@@ -51,9 +51,10 @@ public class polinomio {
         return new polinomio(coef);
     }
     
-    public double evaluar(double x) {
+    public double evaluar(double x) { //esta parte del codigo utiliza el metodo horner para lograr una evaluacion mas eficiente
         double r = 0;
-        for (int i = c.length - 1; i>= 0;) r = r * x + c[i--]; 
+        for (int i = c.length - 1; i>= 0;) r = r * x + c[i--];// Aqui se Aplica la regla de Horner: multiplica el acumulador por x y suma el coeficiente actual,
+            // decrementando el índice 'i' en la misma instrucción (i--) 
         return r;
     }
     
@@ -67,13 +68,13 @@ public class polinomio {
     }
     
     @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = c.length - 1; i >= 0; i--) {
+    public String toString() { // este override reescribe el polinomio haciendolo mas bonito a la vida 
+        StringBuilder sb = new StringBuilder(); 
+        for (int i = c.length - 1; i >= 0; i--) { // aqui esto se convierte en bucle haciendo que ordene de Mayor a menor grado cada termino independiente
             double a = c[i];
-            if (a == 0 && c.length > 1) continue;
+            if (a == 0 && c.length > 1) continue; // Si el coeficiente es cero y el polinomio tiene más de un término, omite este término (ej. no imprime + 0x)
             double abs = Math.abs(a);
-            String cuerpo = (i == 0)
+            String cuerpo = (i == 0) // Define la estructura del término (número, variable x y exponente si aplica)
                     ? fmt(abs)
                     : (abs == 1 ? "" : fmt(abs)) + "x" + (i > 1 ? "^" + i : "");
             if (sb.length() == 0) sb.append(a < 0 ? "-" : "").append(cuerpo);
