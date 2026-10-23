@@ -109,15 +109,22 @@ Sincelab/
 │       │   └── sincelab/
 │       │       ├── storage/
 │       │       │   ├── Archive.java
+│       │       │   ├── derivada.java
+│       │       │   ├── integrales.java
 │       │       │   ├── MatrizCuadrada.java
+│       │       │   ├── polinomio.java
 │       │       │   ├── Users.java
 │       │       │   └── Vector3D.java
 │       │       ├── view/
 │       │       │   ├── curses/
-│       │       │   │   └── algebralineal/
-│       │       │   │       ├── AlgLineal.java
-│       │       │   │       ├── Matrices.java
-│       │       │   │       └── Vectores.java
+│       │       │   │   ├── algebralineal/
+│       │       │   │   │   ├── AlgLineal.java
+│       │       │   │   │   ├── Matrices.java
+│       │       │   │   │   └── Vectores.java
+│       │       │   │   └── matematicas2/
+│       │       │   │       ├── Derivadas.java
+│       │       │   │       ├── Integrales.java
+│       │       │   │       └── Matematicas2.java
 │       │       │   ├── windows/
 │       │       │   │   ├── AboutWindow.java
 │       │       │   │   ├── MainWindow.java
