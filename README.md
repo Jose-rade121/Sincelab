@@ -124,7 +124,8 @@ Sincelab/
 │       │       │   │   └── matematicas2/
 │       │       │   │       ├── Derivadas.java
 │       │       │   │       ├── Integrales.java
-│       │       │   │       └── Matematicas2.java
+│       │       │   │       ├── Matematicas2.java
+│       │       │   │       └── TecDevInt.java
 │       │       │   ├── windows/
 │       │       │   │   ├── AboutWindow.java
 │       │       │   │   ├── MainWindow.java
