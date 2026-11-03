@@ -49,7 +49,7 @@ public class TecDevInt extends JPanel {
         for (String t : teclas) {
             add(crearTecla(t, fontType));
         }
-     } 
+     }  // formas de las teclas del mismo teclado
     private JButton crearTecla(String t,PrincipalFont f){
         JButton b = new JButton(t);
         b.setFocusable(false);
@@ -70,12 +70,12 @@ public class TecDevInt extends JPanel {
     }
       private void pulsar(String t) {
         JTextField c = actual;
-        if (t.equals("Limpiar")) {
+        if (t.equals("Limpiar")) { // esto hace limpiar lo que es todo el texto de la barra 
             c.setText("");
-        } else if (t.equals("Borrar")) {
+        } else if (t.equals("Borrar")) { // esto es borrar cada parte del texto 1 a 1
             borrar(c);
         } else {
-            c.replaceSelection(t);   // inserta donde esta el cursor
+            c.replaceSelection(t);   // 
         }
         c.requestFocusInWindow();
     }
@@ -89,7 +89,7 @@ public class TecDevInt extends JPanel {
             if (ini != fin) {
                 d.remove(ini, fin - ini);
             } else if (ini > 0) {
-                d.remove(ini - 1, 1);
+                d.remove(ini - 1, 1); 
             }
         } catch (BadLocationException ex) {
             // no pasa nada: no habia nada que borrar

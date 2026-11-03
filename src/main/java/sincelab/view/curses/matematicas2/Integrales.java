@@ -162,7 +162,7 @@ public class Integrales extends JFrame implements Themed {
                 + "    x^3 - 4\n\n"
                 + "Limite a y b: extremos de la integral definida.\n"
                 + "Pulsa Iniciar para calcular.",
-                "Ayuda", JOptionPane.INFORMATION_MESSAGE)); //Esto sirve para explicar como funciona la Calculadora y pss como hay gente que no sabe para eso esta ese boton//
+                "Ayuda", JOptionPane.INFORMATION_MESSAGE)); //Esto sirve para explicar como funciona la Calculadora y pss como hay gente que no sabe  entonces para eso esta ese boton//
  
         JPanel centro = new JPanel(new GridBagLayout());
         centro.setOpaque(false);

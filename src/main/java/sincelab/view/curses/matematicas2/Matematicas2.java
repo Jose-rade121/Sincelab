@@ -6,7 +6,7 @@ package sincelab.view.curses.matematicas2;
 
 /**
  *
- * @author Admin
+ * @author Angel
  */
 import java.awt.*;
 import javax.swing.*;
