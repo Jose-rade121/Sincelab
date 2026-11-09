@@ -158,7 +158,9 @@ Sincelab/
 │                       ├── GIT_PULL.PNG
 │                       ├── GIT_PUSH.PNG
 │                       └── GIT_STATUS.PNG
+├── .env.example
 ├── .gitignore
+├── docker-compose.yml
 ├── nb-configuration.xml
 ├── nbactions.xml
 ├── pom.xml
