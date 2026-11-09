@@ -8,7 +8,24 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>26</maven.compiler.release>
-        <exec.mainClass>sincelab.Main.</exec.mainClass>
+        <exec.mainClass>sincelab.Main</exec.mainClass>
     </properties>
-
+    
+    <dependencies>
+    <!--Aqui carga la libreria para la base de datos-->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        
+        <!-- Esto de aqui es para leer el .env y mandar las contraseñas-->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-java</artifactId>
+            <version>3.0.0</version>
+            <type>jar</type>
+        </dependency>
+        
+    </dependencies>
 </project>

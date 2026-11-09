@@ -10,10 +10,8 @@ import java.util.ArrayList;
  *
  * @author josee
  */
-public class Archive extends Users{
-    
-    ArrayList<Users> Data = new ArrayList<>();
-    
+public class Archive{
+    /*
 
     public Archive(String name, String carrer){
         super(name,carrer);
@@ -28,7 +26,7 @@ public class Archive extends Users{
            folder.mkdir();
         }
 
-    }   
+    } 
     
     public File newRegistration(){
        
@@ -42,5 +40,5 @@ public class Archive extends Users{
     public static void main(String[]args){
         FolderCreate();
     }
-      
+   */   
 }

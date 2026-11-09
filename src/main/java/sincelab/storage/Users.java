@@ -1,7 +1,9 @@
 package sincelab.storage;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import java.io.File;
 import java.util.ArrayList;
+import java.sql.*;
 
 /**
  *
@@ -9,22 +11,49 @@ import java.util.ArrayList;
  */
 public class Users {
 
-    private String name = null;
-    private String carrer = null;
-    private int points;
-      
-    public Users(String name, String carrer){
-        this.name = name;
-        this.carrer = carrer;
+    private String Nombre;
+    private String Carrera;
+    private int Puntaje;
+    
+    public Users(String Nombre, String Carrera, int Puntaje){
+        this.Nombre = Nombre;
+        this.Carrera = Carrera;
+        this.Puntaje = Puntaje;
     }
     
+    public String getNombre(){return Nombre;}
+    public String getCarrera() {return Carrera;}
+    public int getPuntaje() {return Puntaje;}
+
+    public void setNombre(String Nombre) {this.Nombre = Nombre;}
+    public void setCarrera(String Carrera) {this.Carrera = Carrera;}
+    public void setPuntaje(int Puntaje) {this.Puntaje = Puntaje;}
     
-    /* Metodos Get*/
-    public void getName(String name) {this.name = name;}
-    public void getCarrer(String carrer) {this.carrer = carrer;}
+    //Aqui faltan alguno cambios para el envio de datos, aun no ejecuten!!!
     
-    /* Metodos Set*/
-    public String setName(){return name;}
-    public String setCarrer(){return carrer;}
-       
+    
+    public void guardar(){
+         
+        Dotenv env = Dotenv.load();
+        
+        String url = env.get("DB_URL");
+        String user = env.get("DB_USER");
+        String pass = env.get("DB_APP_PASSWORD");
+        
+        String sql = "INSERT INTO Estudiantes (nombre, carrera, puntaje) VALUES (?,?,?)";
+        
+        try(Connection con = DriverManager.getConnection(url, user, pass);
+            PreparedStatement ps = con.prepareStatement(sql)){
+            
+            ps.setString(1, this.Nombre);
+            ps.setString(2, this.Carrera);
+            ps.setInt(3, this.Puntaje);
+            System.out.println("Filas insertadas: " + ps.executeUpdate());
+            
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+    }
+  
 }
