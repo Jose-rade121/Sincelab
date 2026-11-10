@@ -125,15 +125,18 @@ Sincelab/
 │       │       │   │       ├── Derivadas.java
 │       │       │   │       ├── Integrales.java
 │       │       │   │       ├── Matematicas2.java
-│       │       │   │       └── TecDevInt.java
-│       │       │   ├── windows/
-│       │       │   │   ├── AboutWindow.java
-│       │       │   │   ├── MainWindow.java
-│       │       │   │   └── UiLogin.java
-│       │       │   ├── Header.java
-│       │       │   ├── PrincipalFont.java
-│       │       │   ├── Themed.java
-│       │       │   └── Themes.java
+│       │       │   │       ├── TecDevInt.java
+│       │       │   │       └── Theory.java
+│       │       │   ├── utilities/
+│       │       │   │   ├── Header.java
+│       │       │   │   ├── PrincipalFont.java
+│       │       │   │   ├── Themed.java
+│       │       │   │   ├── Themes.java
+│       │       │   │   └── TheoryBlock.java
+│       │       │   └── windows/
+│       │       │       ├── AboutWindow.java
+│       │       │       ├── MainWindow.java
+│       │       │       └── UiLogin.java
 │       │       └── Main.java
 │       └── resources/
 │           └── sincelab/
