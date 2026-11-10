@@ -3,9 +3,9 @@ package sincelab.view.windows;
 import java.awt.*;
 import javax.swing.*;
 
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
 
 

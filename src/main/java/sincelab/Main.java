@@ -7,6 +7,7 @@ import sincelab.view.windows.UiLogin;
 import sincelab.view.curses.algebralineal.AlgLineal;
 import sincelab.view.curses.algebralineal.Matrices;
 import sincelab.view.curses.algebralineal.Vectores;
+import sincelab.view.curses.matematicas2.Theory;
 
 /**
  *
@@ -17,7 +18,8 @@ public class Main {
         
         //new Archive(); -> Error por q le faltan 2 strings
         //new AlgLineal();
-        new MainWindow();
+        //new MainWindow();
+        new Theory();
         //new UiLogin();
         //new Vectores();
         //new Matrices();

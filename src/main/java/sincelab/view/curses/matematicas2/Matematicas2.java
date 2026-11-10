@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sincelab.view.curses.matematicas2;
 
 /**
@@ -11,10 +7,10 @@ package sincelab.view.curses.matematicas2;
 import java.awt.*;
 import javax.swing.*;
 
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
 public class Matematicas2 extends JFrame implements Themed{
     
@@ -31,17 +27,23 @@ public class Matematicas2 extends JFrame implements Themed{
         
         JPanel zona = new JPanel();
         
-         JLabel titulo = new JLabel("Matematicas 2", JLabel.CENTER);
-        titulo.setForeground(new Color(59, 130, 246));
-        titulo.setFont(fontType.getFont(fontType.BESTIME, 0, 30));
-        titulo.setBounds(0, 95, 1280, 60);
- 
+        JLabel titulo = new JLabel();
+        titulo.setText("Matematicas 2");
+        titulo.setForeground(new Color(59,130,246));
+        titulo.setFont(fontType.getFont(fontType.BESTIME, 0 ,30));
+        titulo.setBounds(0,110,500,50);
+        titulo.setHorizontalAlignment(JLabel.CENTER);
+        
+        
         JButton derivada = new JButton();
         derivada.setText("Derivada");
         derivada.setBorderPainted(false);
-        derivada.setFocusPainted(true);
+        derivada.setFocusPainted(false);
         derivada.setContentAreaFilled(true);
-        derivada.setBounds(390, 280, 110, 80);
+        derivada.setBackground(new Color(59,130,246));
+        derivada.setForeground(new Color(255,255,255));
+        derivada.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        derivada.setBounds(95,200,130,80);
  
         derivada.addActionListener(e -> {
             new Derivadas();
@@ -51,8 +53,12 @@ public class Matematicas2 extends JFrame implements Themed{
         JButton integral = new JButton();
         integral.setText("Integrales");
         integral.setBorderPainted(false);
-        integral.setFocusPainted(true);
-        integral.setBounds(760, 280, 110, 80);
+        integral.setFocusPainted(false);
+        integral.setContentAreaFilled(true);
+        integral.setBackground(new Color(59,130,246));
+        integral.setForeground(new Color(255,255,255));
+        integral.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        integral.setBounds(262,200,130,80);
         
         integral.addActionListener(e -> {
             
@@ -65,13 +71,13 @@ public class Matematicas2 extends JFrame implements Themed{
         zona.add(integral);
         zona.add(titulo);
         
-            ImageIcon icon = new ImageIcon(
-                getClass().getResource("/sincelab/assets/icons/icon.png")
+        ImageIcon icon = new ImageIcon(
+            getClass().getResource("/sincelab/assets/icons/icon.png")
         );
  
         setIconImage(icon.getImage());
         setTitle("MATEMATICAS 2");
-        setSize(1280, 720);
+        setSize(500,720);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
  

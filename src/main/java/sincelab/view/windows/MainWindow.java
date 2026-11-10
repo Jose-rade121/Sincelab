@@ -4,10 +4,10 @@ import java.awt.*;
 import javax.swing.*;
 
 
-import sincelab.view.Header;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
-import sincelab.view.PrincipalFont;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
+import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.curses.algebralineal.AlgLineal;
 import sincelab.view.curses.matematicas2.Matematicas2;
 
@@ -86,12 +86,12 @@ public final class MainWindow extends JFrame implements Themed{
         mate.setFocusPainted(false);
         mate.setForeground(new Color(255, 255, 255));
         mate.setBackground(new Color(111, 94, 171));
-        mate.setBounds(95, 320, 140, 38);
+        mate.setBounds(55, 305, 140, 38);
         add(mate);
 
         mate.addActionListener(e -> {
-        new Matematicas2();
-        dispose();
+            new Matematicas2();
+            dispose();
         });
         
 
@@ -108,6 +108,16 @@ public final class MainWindow extends JFrame implements Themed{
         fis.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         fisica1.add(fis);
         
+        JButton fisi = new JButton();
+        fisi.setText("Iniciar");
+        fisi.setBorderPainted(false);
+        fisi.setFocusPainted(false);
+        fisi.setForeground(new Color(255, 255, 255));
+        fisi.setBackground(new Color(111, 94, 171));
+        fisi.setBounds(55, 600, 140, 38);
+        add(fisi);
+        
+        
         JPanel humanidades = new JPanel();
         //humanidades.setPreferredSize(new Dimension(350,250));
         humanidades.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
@@ -116,9 +126,22 @@ public final class MainWindow extends JFrame implements Themed{
         
         JLabel hum = new JLabel();
         hum.setText("Humanidades");
-        hum.setBounds(15,25,300,20);
+        hum.setBounds(13,25,300,20);
         hum.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         humanidades.add(hum);
+        
+        JButton humn = new JButton();
+        humn.setText("Iniciar");
+        humn.setBorderPainted(false);
+        humn.setFocusPainted(false);
+        humn.setForeground(new Color(255, 255, 255));
+        humn.setBackground(new Color(111, 94, 171));
+        humn.setBounds(415, 305, 140, 38);
+        add(humn);
+        
+        humn.addActionListener(e -> {
+            dispose();
+        });
         
         
         

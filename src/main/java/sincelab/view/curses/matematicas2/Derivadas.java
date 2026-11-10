@@ -9,10 +9,10 @@ import javax.swing.*;
 
 import sincelab.storage.derivada;
 import sincelab.storage.polinomio;
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 /**
  *
  * @author Angel
