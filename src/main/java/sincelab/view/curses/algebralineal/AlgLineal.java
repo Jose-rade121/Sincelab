@@ -70,9 +70,24 @@ public class AlgLineal extends JFrame implements Themed{
             dispose();
         });
         
+        JButton teoria = new JButton();
+        teoria.setText("Teoria");
+        teoria.setBorderPainted(false);
+        teoria.setFocusPainted(false);
+        teoria.setBackground(new Color(59,130,246));
+        teoria.setForeground(new Color(255,255,255));
+        teoria.setBounds(178,300,130,80);
+        teoria.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        
+        teoria.addActionListener(e -> {
+            new TeoriaAlg();
+            dispose();
+        });
+        
         zona.setLayout(null);
         zona.add(vectores);
         zona.add(matriz);
+        zona.add(teoria);
         zona.add(titulo);
         
 
