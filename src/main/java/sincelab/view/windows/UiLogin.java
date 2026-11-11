@@ -3,9 +3,9 @@ package sincelab.view.windows;
 import java.awt.*;
 import javax.swing.*;
 
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
 
 
@@ -21,9 +21,7 @@ public class UiLogin extends JFrame implements Themed{
         getContentPane().repaint();
     }
     
-    
-    
-    
+      
     
     public UiLogin(){
         
@@ -96,7 +94,17 @@ public class UiLogin extends JFrame implements Themed{
         enviar.setBorderPainted(false);
         enviar.setFocusPainted(false);
         enviar.setBounds(95,260,140,38);
-       
+        
+        
+        /*
+        private void btnGuardado(java.awt.ActionEvent e){
+            try{
+               String nombre1 = nombre.getText().trim();
+               String carrera2 = carrera.getText().trim();
+               
+            }
+        }
+        */
         
         
         loginPanel.setOpaque(false);

@@ -1,0 +1,44 @@
+## YAML Template.
+---
+
+# Mi gente, aqui estamos usando un .env
+# Que es un gestor privado de Contraseñas
+# Como pueden ver en el .gitignore no lo sube 
+# a github, por lo que cada uno debe de 
+# crear sus contraseñas, estas son privadas,
+# en las carpetas hay un .env.example, que es el
+# boceto del .env que deben crear
+# La primera Variable es la contraseña 
+# con permisos de Admin
+# La segunda es para modificar la base de registro
+
+# Ojo con esas contraseñas, haganlas seguras,
+# q si se filtran valimos madres.
+
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: Registros-db
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: users
+      MARIADB_USER: Registros_app
+      MARIADB_PASSWORD: ${DB_APP_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - datos_mariadb:/var/lib/mysql
+      
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: Registros-phpmyadmin
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    depends_on:
+      - mariadb
+      
+volumes:
+  datos_mariadb:

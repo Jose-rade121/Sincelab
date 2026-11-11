@@ -4,10 +4,10 @@ import java.awt.*;
 import javax.swing.*;
 
 
-import sincelab.view.Header;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
-import sincelab.view.PrincipalFont;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
+import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.curses.algebralineal.AlgLineal;
 import sincelab.view.curses.fisica1.Fisica1;
 import sincelab.view.curses.matematicas2.Matematicas2;
@@ -80,19 +80,29 @@ public final class MainWindow extends JFrame implements Themed{
         mat.setBounds(15,25,300,20);
         mat.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         matematicas1.add(mat);
-        
+        /*
+        JLabel descM = new JLabel();
+        descM.setText(
+                "<html>"
+                    "<p>Cálculo diferencial e integral. Aprende a derivar"
+                    "y a integrar funciones, y a usarlas para calcular "
+                    "pendientes, máximos y mínimos, y áreas. </p>"
+                "</html>");
+        descM.setBounds(15,45,300,20);
+        matematicas1.add(descM);
+        */     
         JButton mate = new JButton();
         mate.setText("Iniciar");
         mate.setBorderPainted(false);
         mate.setFocusPainted(false);
         mate.setForeground(new Color(255, 255, 255));
         mate.setBackground(new Color(111, 94, 171));
-        mate.setBounds(95, 320, 140, 38);
+        mate.setBounds(55, 305, 140, 38);
         add(mate);
 
         mate.addActionListener(e -> {
-        new Matematicas2();
-        dispose();
+            new Matematicas2();
+            dispose();
         });
         
 
@@ -123,6 +133,16 @@ public final class MainWindow extends JFrame implements Themed{
         dispose();
         });
         
+        JButton fisi = new JButton();
+        fisi.setText("Iniciar");
+        fisi.setBorderPainted(false);
+        fisi.setFocusPainted(false);
+        fisi.setForeground(new Color(255, 255, 255));
+        fisi.setBackground(new Color(111, 94, 171));
+        fisi.setBounds(55, 600, 140, 38);
+        add(fisi);
+        
+        
         JPanel humanidades = new JPanel();
         //humanidades.setPreferredSize(new Dimension(350,250));
         humanidades.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
@@ -131,9 +151,22 @@ public final class MainWindow extends JFrame implements Themed{
         
         JLabel hum = new JLabel();
         hum.setText("Humanidades");
-        hum.setBounds(15,25,300,20);
+        hum.setBounds(13,25,300,20);
         hum.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         humanidades.add(hum);
+        
+        JButton humn = new JButton();
+        humn.setText("Iniciar");
+        humn.setBorderPainted(false);
+        humn.setFocusPainted(false);
+        humn.setForeground(new Color(255, 255, 255));
+        humn.setBackground(new Color(111, 94, 171));
+        humn.setBounds(415, 305, 140, 38);
+        add(humn);
+        
+        humn.addActionListener(e -> {
+            dispose();
+        });
         
         
         

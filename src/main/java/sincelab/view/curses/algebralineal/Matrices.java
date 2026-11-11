@@ -4,10 +4,10 @@ import java.awt.*;
 import javax.swing.*;
 
 import sincelab.storage.MatrizCuadrada;
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
 /**
  *

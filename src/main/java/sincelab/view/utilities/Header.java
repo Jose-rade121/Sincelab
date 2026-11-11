@@ -1,4 +1,4 @@
-package sincelab.view;
+package sincelab.view.utilities;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sincelab.view.curses.matematicas2;
 
 import java.awt.*;
@@ -9,10 +5,10 @@ import javax.swing.*;
 
 import sincelab.storage.derivada;
 import sincelab.storage.polinomio;
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 /**
  *
  * @author Angel
@@ -135,6 +131,20 @@ public class Derivadas extends JFrame implements Themed {
         cajaPunt.add(puntuaciones);
         tarjeta.add(cajaPunt); */ //NO funciona//
  
+        /*Boton regreso*/
+        JButton ret = new JButton("<-");
+        ret.setBounds(390, 475, 60, 34);
+        ret.setBackground(new Color(111, 94, 171));
+        ret.setForeground(Color.WHITE);
+        ret.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 14));
+        ret.setFocusPainted(false);
+        ret.addActionListener(e ->{
+            new Matematicas2();
+            dispose();
+        });
+        tarjeta.add(ret);
+        
+        
         /* Boton Iniciar */
         JButton iniciar = new JButton("Iniciar");
         iniciar.setBounds(470, 475, 160, 34);

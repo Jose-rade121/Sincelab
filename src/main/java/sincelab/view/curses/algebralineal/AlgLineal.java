@@ -4,10 +4,10 @@ import java.awt.*;
 import javax.swing.*;
 
 
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
 /**
  *
@@ -35,7 +35,7 @@ public class AlgLineal extends JFrame implements Themed{
    
         JLabel titulo = new JLabel();
         titulo.setText("Algebra Lineal");
-        titulo.setForeground(new Color(59,130,246));//(x
+        titulo.setForeground(new Color(59,130,246));
         titulo.setFont(fontType.getFont(fontType.BESTIME, 0 ,30));
         titulo.setBounds(0,110,500,50);
         titulo.setHorizontalAlignment(JLabel.CENTER);
@@ -48,7 +48,7 @@ public class AlgLineal extends JFrame implements Themed{
         matriz.setBackground(new Color(59,130,246));
         matriz.setForeground(new Color(255,255,255));
         matriz.setContentAreaFilled(true);
-        matriz.setBounds(108,200,130,80);
+        matriz.setBounds(95,200,130,80);
         matriz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
         
         matriz.addActionListener(e -> {
@@ -70,9 +70,24 @@ public class AlgLineal extends JFrame implements Themed{
             dispose();
         });
         
+        JButton teoria = new JButton();
+        teoria.setText("Teoria");
+        teoria.setBorderPainted(false);
+        teoria.setFocusPainted(false);
+        teoria.setBackground(new Color(59,130,246));
+        teoria.setForeground(new Color(255,255,255));
+        teoria.setBounds(178,300,130,80);
+        teoria.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        
+        teoria.addActionListener(e -> {
+            new TeoriaAlg();
+            dispose();
+        });
+        
         zona.setLayout(null);
         zona.add(vectores);
         zona.add(matriz);
+        zona.add(teoria);
         zona.add(titulo);
         
 

@@ -120,20 +120,26 @@ Sincelab/
 │       │       │   │   ├── algebralineal/
 │       │       │   │   │   ├── AlgLineal.java
 │       │       │   │   │   ├── Matrices.java
+│       │       │   │   │   ├── TeoriaAlg.java
 │       │       │   │   │   └── Vectores.java
+│       │       │   │   ├── humanidades/
+│       │       │   │   │   └── humanidadest.java
 │       │       │   │   └── matematicas2/
 │       │       │   │       ├── Derivadas.java
 │       │       │   │       ├── Integrales.java
 │       │       │   │       ├── Matematicas2.java
-│       │       │   │       └── TecDevInt.java
-│       │       │   ├── windows/
-│       │       │   │   ├── AboutWindow.java
-│       │       │   │   ├── MainWindow.java
-│       │       │   │   └── UiLogin.java
-│       │       │   ├── Header.java
-│       │       │   ├── PrincipalFont.java
-│       │       │   ├── Themed.java
-│       │       │   └── Themes.java
+│       │       │   │       ├── TecDevInt.java
+│       │       │   │       └── Theorym.java
+│       │       │   ├── utilities/
+│       │       │   │   ├── Header.java
+│       │       │   │   ├── PrincipalFont.java
+│       │       │   │   ├── Themed.java
+│       │       │   │   ├── Themes.java
+│       │       │   │   └── TheoryBlock.java
+│       │       │   └── windows/
+│       │       │       ├── AboutWindow.java
+│       │       │       ├── MainWindow.java
+│       │       │       └── UiLogin.java
 │       │       └── Main.java
 │       └── resources/
 │           └── sincelab/
@@ -158,7 +164,9 @@ Sincelab/
 │                       ├── GIT_PULL.PNG
 │                       ├── GIT_PUSH.PNG
 │                       └── GIT_STATUS.PNG
+├── .env.example
 ├── .gitignore
+├── docker-compose.yml
 ├── nb-configuration.xml
 ├── nbactions.xml
 ├── pom.xml
