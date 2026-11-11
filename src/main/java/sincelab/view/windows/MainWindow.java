@@ -9,6 +9,8 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.curses.algebralineal.AlgLineal;
+import sincelab.view.curses.fisica1.Fisica1;
+import sincelab.view.curses.humanidades.humanidadest;
 import sincelab.view.curses.matematicas2.Matematicas2;
 
 
@@ -117,7 +119,7 @@ public final class MainWindow extends JFrame implements Themed{
         fis.setBounds(15,25,300,20);
         fis.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         fisica1.add(fis);
-        
+
         JButton fisi = new JButton();
         fisi.setText("Iniciar");
         fisi.setBorderPainted(false);
@@ -126,8 +128,13 @@ public final class MainWindow extends JFrame implements Themed{
         fisi.setBackground(new Color(111, 94, 171));
         fisi.setBounds(55, 600, 140, 38);
         add(fisi);
+
+        fisi.addActionListener(e -> {
+            new Fisica1();
+            dispose();
+        });
         
-        
+
         JPanel humanidades = new JPanel();
         //humanidades.setPreferredSize(new Dimension(350,250));
         humanidades.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
@@ -150,6 +157,7 @@ public final class MainWindow extends JFrame implements Themed{
         add(humn);
         
         humn.addActionListener(e -> {
+            new humanidadest();
             dispose();
         });
         

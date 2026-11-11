@@ -133,6 +133,19 @@ public class Vectores extends JFrame implements Themed {
         enviar.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 15));
         enviar.addActionListener(e -> sendInfo());
         
+        /*Boton regreso*/
+        JButton ret = new JButton("<-");
+        ret.setBounds(380, 560, 60, 38);
+        ret.setBackground(new Color(111, 94, 171));
+        ret.setForeground(Color.WHITE);
+        ret.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 14));
+        ret.setFocusPainted(false);
+        ret.addActionListener(e ->{
+            new AlgLineal();
+            dispose();
+        });
+        posiciones.add(ret);
+        
         resultado = new JLabel();
         resultado.setBounds(30,300,440,200);
         resultado.setFont(fontType.getFont(fontType.STAY_WITH_ME, 0, 25));

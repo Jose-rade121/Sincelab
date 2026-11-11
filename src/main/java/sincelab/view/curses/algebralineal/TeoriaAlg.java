@@ -272,8 +272,7 @@ import sincelab.view.utilities.TheoryBlock;
             new AlgLineal();
             dispose();
         });
-        add(ret);
-        
+
         
         Siguiente.setBounds(740,560,140,38);
         Siguiente.setBorderPainted(false);
@@ -281,8 +280,7 @@ import sincelab.view.utilities.TheoryBlock;
         Siguiente.setForeground(new Color(255, 255, 255));
         Siguiente.setBackground(new Color(111, 94, 171));
         Siguiente.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 14));
-        add(Siguiente);
-        
+     
         Siguiente.addActionListener(e -> mostrar(actual + 1));
         
         
@@ -292,8 +290,7 @@ import sincelab.view.utilities.TheoryBlock;
         Atras.setForeground(new Color(255, 255, 255));
         Atras.setBackground(new Color(111, 94, 171));
         Atras.setBounds(220,560,140,38);
-        add(Atras);
-        
+  
         Atras.addActionListener(e -> mostrar(actual - 1));
         
         
@@ -313,6 +310,12 @@ import sincelab.view.utilities.TheoryBlock;
         centro.setBorder(BorderFactory.createEmptyBorder(20,40,10,40));
         add(centro, BorderLayout.CENTER);
         
+        JPanel pie = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 10));
+        pie.setOpaque(false);
+        pie.add(ret);
+        pie.add(Atras);
+        pie.add(Siguiente);
+        add(pie, BorderLayout.SOUTH);
         
         mostrar(0);
         

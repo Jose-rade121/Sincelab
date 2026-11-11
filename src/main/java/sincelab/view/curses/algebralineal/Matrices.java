@@ -182,6 +182,20 @@ public class Matrices extends JFrame implements Themed {
         generar.addActionListener(e -> generarCampos());
         posiciones.add(generar);
         
+        /*Boton regreso*/
+        JButton ret = new JButton("<-");
+        ret.setBounds(380, 560, 60, 38);
+        ret.setBackground(new Color(111, 94, 171));
+        ret.setForeground(Color.WHITE);
+        ret.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 14));
+        ret.setFocusPainted(false);
+        ret.addActionListener(e ->{
+            new AlgLineal();
+            dispose();
+        });
+        posiciones.add(ret);
+        
+        
         crear = new JButton("Calcular");
         crear.setBounds(112,400,275,32);
         crear.setBackground(new Color(111,94,171));

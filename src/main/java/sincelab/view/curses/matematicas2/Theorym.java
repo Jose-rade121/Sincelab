@@ -296,6 +296,7 @@ public class Theorym extends JFrame implements Themed{
             itAplicacio
         };
         
+        
         /*Boton regreso*/
         JButton ret = new JButton("<-");
         ret.setBounds(380, 560, 60, 38);
@@ -307,16 +308,14 @@ public class Theorym extends JFrame implements Themed{
             new Matematicas2();
             dispose();
         });
-        add(ret);
         
-        
+        setLayout(new BorderLayout());
         Siguiente.setBounds(740,560,140,38);
         Siguiente.setBorderPainted(false);
         Siguiente.setFocusPainted(false);
         Siguiente.setForeground(new Color(255, 255, 255));
         Siguiente.setBackground(new Color(111, 94, 171));
         Siguiente.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 14));
-        add(Siguiente);
         
         Siguiente.addActionListener(e -> mostrar(actual + 1));
         
@@ -327,12 +326,10 @@ public class Theorym extends JFrame implements Themed{
         Atras.setForeground(new Color(255, 255, 255));
         Atras.setBackground(new Color(111, 94, 171));
         Atras.setBounds(220,560,140,38);
-        add(Atras);
         
         Atras.addActionListener(e -> mostrar(actual - 1));
         
         
-        setLayout(new BorderLayout());
         setIconImage(icon.getImage());
         setTitle("SINCELAB - Teoria Matematicas 2");
         setSize(1100,700);
@@ -348,7 +345,14 @@ public class Theorym extends JFrame implements Themed{
         centro.setBorder(BorderFactory.createEmptyBorder(20,40,10,40));
         add(centro, BorderLayout.CENTER);
         
-        
+
+        JPanel pie = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 10));
+        pie.setOpaque(false);
+        pie.add(ret);
+        pie.add(Atras);
+        pie.add(Siguiente);
+        add(pie, BorderLayout.SOUTH);
+                
         mostrar(0);
         
         setLocationRelativeTo(null);
