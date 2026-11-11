@@ -109,13 +109,16 @@ Sincelab/
 │       │   └── sincelab/
 │       │       ├── storage/
 │       │       │   ├── Archive.java
+│       │       │   ├── BancoPreguntas.java
 │       │       │   ├── caidalibre.java
 │       │       │   ├── derivada.java
 │       │       │   ├── integrales.java
 │       │       │   ├── MatrizCuadrada.java
 │       │       │   ├── mua.java
 │       │       │   ├── polinomio.java
+│       │       │   ├── Pregunta.java
 │       │       │   ├── segundaley.java
+│       │       │   ├── Sesion.java
 │       │       │   ├── Users.java
 │       │       │   └── Vector3D.java
 │       │       ├── view/
@@ -149,6 +152,7 @@ Sincelab/
 │       │       │   └── windows/
 │       │       │       ├── AboutWindow.java
 │       │       │       ├── MainWindow.java
+│       │       │       ├── Quizwindow.java
 │       │       │       └── UiLogin.java
 │       │       └── Main.java
 │       └── resources/
