@@ -120,6 +120,7 @@ Sincelab/
 │       │       │   │   ├── algebralineal/
 │       │       │   │   │   ├── AlgLineal.java
 │       │       │   │   │   ├── Matrices.java
+│       │       │   │   │   ├── TeoriaAlg.java
 │       │       │   │   │   └── Vectores.java
 │       │       │   │   └── matematicas2/
 │       │       │   │       ├── Derivadas.java
