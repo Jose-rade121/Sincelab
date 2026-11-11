@@ -2,6 +2,7 @@ package sincelab.view.curses.fisica1;
 
 import sincelab.storage.mua;
 
+
 /**
  *
  * @author alejo
@@ -31,6 +32,7 @@ public class MovAcelerado extends CalcFisica {
                     {"Velocidad inicial (m/s):", "Aceleracion (m/s^2):", "Tiempo (s):"},
                     {"Velocidad inicial (m/s):", "Aceleracion (m/s^2):", "Distancia (m):"}
                 });
+         
     }
 
     @Override

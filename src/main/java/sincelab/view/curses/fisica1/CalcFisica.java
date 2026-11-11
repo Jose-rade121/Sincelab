@@ -1,17 +1,16 @@
 package sincelab.view.curses.fisica1;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import javax.swing.*;
 
 import sincelab.storage.polinomio;
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+import sincelab.view.curses.matematicas2.Matematicas2;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
+
 
 /**
  * Lo que comparten las 3 calculadoras de fisica: los campos, el resultado y
@@ -30,7 +29,7 @@ public abstract class CalcFisica extends JFrame implements Themed {
     private final JLabel[] etiquetas;
     private final JTextField[] campos;
     private final JTextArea resultado;
-    private final List<String> calculos = new ArrayList<>();
+    private final ArrayList<String> calculos = new ArrayList<>();
     private final Map<String, String> guardados = new HashMap<>(); // lo escrito en cada campo, asi no se borra al cambiar de boton //
     private int modo = 0;
     private int numero = 0; // cuantos calculos se han hecho desde el ultimo Reiniciar //
@@ -271,7 +270,7 @@ public abstract class CalcFisica extends JFrame implements Themed {
         JButton resultados = Boton("Resultados", 655, fontType);
         resultados.addActionListener(e -> verResultados());
         tarjeta.add(resultados);
-
+        
         /* Boton de ayuda */
         JButton ayuda = new JButton("?");
         ayuda.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 28));
@@ -286,6 +285,7 @@ public abstract class CalcFisica extends JFrame implements Themed {
         centro.setOpaque(false);
         centro.add(tarjeta);
 
+   
         JPanel pie = new JPanel(new FlowLayout(FlowLayout.RIGHT, 30, 0));
         pie.setOpaque(false);
         pie.add(ayuda);

@@ -2,11 +2,12 @@ package sincelab.view.curses.fisica1;
 
 import java.awt.*;
 import javax.swing.*;
+import sincelab.view.utilities.Header;
+import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Themed;
+import sincelab.view.utilities.Themes;
 
-import sincelab.view.Header;
-import sincelab.view.PrincipalFont;
-import sincelab.view.Themed;
-import sincelab.view.Themes;
+
 
 /**
  *
@@ -21,7 +22,7 @@ public class Fisica1 extends JFrame implements Themed{
         getContentPane().revalidate();
         getContentPane().repaint();
     }
-
+    
     /* Boton azul del menu, los 3 son iguales */
     private JButton Boton(String texto, int y, PrincipalFont f){
         JButton b = new JButton();
@@ -34,7 +35,7 @@ public class Fisica1 extends JFrame implements Themed{
         b.setFont(f.getFont(f.HEY_COMIC, 0, 15));
         return b;
     }
-
+    
     public Fisica1(){
 
         PrincipalFont fontType = new PrincipalFont();
@@ -45,24 +46,24 @@ public class Fisica1 extends JFrame implements Themed{
         titulo.setText("Fisica 1");
         titulo.setForeground(new Color(59,130,246));
         titulo.setFont(fontType.getFont(fontType.BESTIME, 0 ,30));
-        titulo.setBounds(0,110,500,50);
+        titulo.setBounds(0,90,500,50);
         titulo.setHorizontalAlignment(JLabel.CENTER);
 
-        JButton movimiento = Boton("Movimiento uniformemente acelerado", 200, fontType);
+        JButton movimiento = Boton("Movimiento uniformemente acelerado", 180, fontType);
 
         movimiento.addActionListener(e -> {
             new MovAcelerado();
             dispose();
         });
 
-        JButton newton = Boton("Segunda ley de Newton", 300, fontType);
+        JButton newton = Boton("Segunda ley de Newton", 280, fontType);
 
         newton.addActionListener(e -> {
             new SegundaLey();
             dispose();
         });
 
-        JButton caida = Boton("Caida libre", 400, fontType);
+        JButton caida = Boton("Caida libre", 380, fontType);
 
         caida.addActionListener(e -> {
             new CaidaLibre();
