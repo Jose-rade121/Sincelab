@@ -6,6 +6,8 @@ import javax.swing.*;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
+import sincelab.storage.Sesion;
+import sincelab.storage.Users;
 
 
 
@@ -21,9 +23,15 @@ public class UiLogin extends JFrame implements Themed{
         getContentPane().repaint();
     }
     
+    public UiLogin(){
+        this(null);
+        
+    }
+    
+    public UiLogin(Runnable alTerminar){
       
     
-    public UiLogin(){
+    
         
          ImageIcon icon = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/guardado.png")
@@ -95,6 +103,22 @@ public class UiLogin extends JFrame implements Themed{
         enviar.setFocusPainted(false);
         enviar.setBounds(95,260,140,38);
         
+        enviar.addActionListener(e -> {
+            String n = nombre.getText().trim();
+            String c = carrera.getText().trim();
+            if (n.isEmpty() || c.isEmpty()) {
+                JOptionPane.showMessageDialog(this,
+                        "Escribe tu nombre y tu carrera.",
+                        "Dato Invalido",
+                        JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            Sesion.iniciar(new Users(n, c, 0));
+            dispose();
+            if (alTerminar != null) {
+                alTerminar.run();
+            }
+        });
         
         /*
         private void btnGuardado(java.awt.ActionEvent e){

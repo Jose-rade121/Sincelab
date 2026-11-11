@@ -6,7 +6,9 @@ package sincelab.view.curses.matematicas2;
  */
 import java.awt.*;
 import javax.swing.*;
-
+ 
+import sincelab.storage.BancoPreguntas;
+import sincelab.view.windows.Quizwindow;
 import sincelab.view.utilities.Header;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
@@ -81,8 +83,21 @@ public class Matematicas2 extends JFrame implements Themed{
             new Theorym();
             dispose();
         });
+            JButton quiz = new JButton();
+        quiz.setText("Quiz");
+        quiz.setBorderPainted(false);
+        quiz.setFocusPainted(false);
+        quiz.setContentAreaFilled(true);
+        quiz.setBackground(new Color(59,130,246));
+        quiz.setForeground(new Color(255,255,255));
+        quiz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        quiz.setBounds(180,410,130,80);
+ 
+        quiz.addActionListener(e -> Quizwindow.abrir(
+                this, "Matematicas 2", BancoPreguntas.matematicas2(), Matematicas2::new));
         
         zona.setLayout(null);
+        zona.add(quiz);
         zona.add(derivada);
         zona.add(integral);
         zona.add(teoria);

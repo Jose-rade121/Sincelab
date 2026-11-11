@@ -3,7 +3,8 @@ package sincelab.view.curses.algebralineal;
 import java.awt.*;
 import javax.swing.*;
 
-
+import sincelab.storage.BancoPreguntas;
+import sincelab.view.windows.Quizwindow;
 import sincelab.view.utilities.Header;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
@@ -70,7 +71,7 @@ public class AlgLineal extends JFrame implements Themed{
             dispose();
         });
         
-        JButton teoria = new JButton();
+        JButton teoria = new JButton(); // En esta parte del codigo, podremos ver todo aplicado anteriormente en TeoriaAlg
         teoria.setText("Teoria");
         teoria.setBorderPainted(false);
         teoria.setFocusPainted(false);
@@ -84,7 +85,21 @@ public class AlgLineal extends JFrame implements Themed{
             dispose();
         });
         
+         JButton quiz = new JButton();
+        quiz.setText("Quiz");
+        quiz.setBorderPainted(false);
+        quiz.setFocusPainted(false);
+        quiz.setContentAreaFilled(true);
+        quiz.setBackground(new Color(59,130,246));
+        quiz.setForeground(new Color(255,255,255));
+        quiz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        quiz.setBounds(178,410,130,80);
+ 
+        quiz.addActionListener(e -> Quizwindow.abrir(
+                this, "Algebra Lineal", BancoPreguntas.algebraLineal(), AlgLineal::new));
+        
         zona.setLayout(null);
+        zona.add(quiz);
         zona.add(vectores);
         zona.add(matriz);
         zona.add(teoria);

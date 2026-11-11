@@ -28,6 +28,7 @@ public class Users {
     public void setNombre(String Nombre) {this.Nombre = Nombre;}
     public void setCarrera(String Carrera) {this.Carrera = Carrera;}
     public void setPuntaje(int Puntaje) {this.Puntaje = Puntaje;}
+    public void sumarPuntaje(int puntos) {this.Puntaje += puntos;}
     
     //Aqui faltan alguno cambios para el envio de datos, aun no ejecuten!!!
     
