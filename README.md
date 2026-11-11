@@ -122,6 +122,8 @@ Sincelab/
 │       │       │   │   │   ├── Matrices.java
 │       │       │   │   │   ├── TeoriaAlg.java
 │       │       │   │   │   └── Vectores.java
+│       │       │   │   ├── humanidades/
+│       │       │   │   │   └── humanidadest.java
 │       │       │   │   └── matematicas2/
 │       │       │   │       ├── Derivadas.java
 │       │       │   │       ├── Integrales.java
