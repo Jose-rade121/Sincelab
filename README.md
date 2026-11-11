@@ -126,7 +126,7 @@ Sincelab/
 │       │       │   │       ├── Integrales.java
 │       │       │   │       ├── Matematicas2.java
 │       │       │   │       ├── TecDevInt.java
-│       │       │   │       └── Theory.java
+│       │       │   │       └── Theorym.java
 │       │       │   ├── utilities/
 │       │       │   │   ├── Header.java
 │       │       │   │   ├── PrincipalFont.java
