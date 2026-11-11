@@ -79,7 +79,17 @@ public final class MainWindow extends JFrame implements Themed{
         mat.setBounds(15,25,300,20);
         mat.setFont(fontType.getFont(fontType.BESTIME, 0, 20));    
         matematicas1.add(mat);
-        
+        /*
+        JLabel descM = new JLabel();
+        descM.setText(
+                "<html>"
+                    "<p>Cálculo diferencial e integral. Aprende a derivar"
+                    "y a integrar funciones, y a usarlas para calcular "
+                    "pendientes, máximos y mínimos, y áreas. </p>"
+                "</html>");
+        descM.setBounds(15,45,300,20);
+        matematicas1.add(descM);
+        */     
         JButton mate = new JButton();
         mate.setText("Iniciar");
         mate.setBorderPainted(false);

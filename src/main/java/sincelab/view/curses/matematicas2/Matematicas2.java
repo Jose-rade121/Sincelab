@@ -66,10 +66,28 @@ public class Matematicas2 extends JFrame implements Themed{
             dispose();
         });
         
+        JButton teoria = new JButton();
+        teoria.setText("Teoria");
+        teoria.setBorderPainted(false);
+        teoria.setFocusPainted(false);
+        teoria.setContentAreaFilled(true);
+        teoria.setBackground(new Color(59,130,246));
+        teoria.setForeground(new Color(255,255,255));
+        teoria.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        teoria.setBounds(180,310,130,80);
+        
+        teoria.addActionListener(e -> {
+            
+            new Theorym();
+            dispose();
+        });
+        
         zona.setLayout(null);
         zona.add(derivada);
         zona.add(integral);
+        zona.add(teoria);
         zona.add(titulo);
+        
         
         ImageIcon icon = new ImageIcon(
             getClass().getResource("/sincelab/assets/icons/icon.png")

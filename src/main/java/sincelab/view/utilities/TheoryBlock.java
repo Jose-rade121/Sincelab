@@ -11,6 +11,9 @@ import sincelab.view.utilities.PrincipalFont;
  */
 public class TheoryBlock extends JPanel{
     
+    private final JLabel lblTitulo;
+    private final JEditorPane area;
+    
     public TheoryBlock(String titulo, String texto,int x, int y, int ancho, int alto){
         
         PrincipalFont fontType = new PrincipalFont();
@@ -22,10 +25,10 @@ public class TheoryBlock extends JPanel{
             BorderFactory.createLineBorder(Color.BLACK,2),
             BorderFactory.createEmptyBorder(12,15,12,15)));
         
-        JLabel lblTitulo = new JLabel(titulo);
+        lblTitulo = new JLabel(titulo);
         lblTitulo.setFont(fontType.getFont(fontType.BESTIME, 0, 20));
         
-        JEditorPane area = new JEditorPane();
+        area = new JEditorPane();
         area.setEditable(false);
         area.setContentType("text/html");
         area.setOpaque(false);
@@ -41,4 +44,11 @@ public class TheoryBlock extends JPanel{
         add(scroll, BorderLayout.CENTER);
         
     }
+    
+    public void actualizar(String titulo, String html){
+        lblTitulo.setText(titulo);
+        area.setText(html);
+        area.setCaretPosition(0);
+    }
+    
 }
