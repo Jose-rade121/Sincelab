@@ -64,7 +64,7 @@ public class polinomio {
  
     public static String fmt(double d) {
         if (Math.abs(d - Math.rint(d)) < 1e-9) return String.valueOf((long) Math.rint(d));
-        return String.format("%.4f", d).replaceAll("0+$", "").replaceAll("\\.$", ""); // esta funcion solo hacer redondear los numeros con decimales grandisimos//
+        return String.format("%.4f", d).replaceAll("0+$", "").replaceAll("[.,]$", ""); // esta funcion solo hacer redondear los numeros con decimales grandisimos//
     }
     
     @Override
