@@ -69,12 +69,20 @@ public class Fisica1 extends JFrame implements Themed{
             new CaidaLibre();
             dispose();
         });
-
+        
+        JButton teoria = Boton("Teoria", 480, fontType);
+        
+        teoria.addActionListener(e -> {
+            new Theoryf();
+            dispose();
+        });
+        
         zona.setLayout(null);
         zona.add(movimiento);
         zona.add(newton);
         zona.add(caida);
         zona.add(titulo);
+        zona.add(teoria);
 
 
         //Disposiciones de la ventana
