@@ -109,10 +109,13 @@ Sincelab/
 │       │   └── sincelab/
 │       │       ├── storage/
 │       │       │   ├── Archive.java
+│       │       │   ├── caidalibre.java
 │       │       │   ├── derivada.java
 │       │       │   ├── integrales.java
 │       │       │   ├── MatrizCuadrada.java
+│       │       │   ├── mua.java
 │       │       │   ├── polinomio.java
+│       │       │   ├── segundaley.java
 │       │       │   ├── Users.java
 │       │       │   └── Vector3D.java
 │       │       ├── view/
@@ -122,6 +125,12 @@ Sincelab/
 │       │       │   │   │   ├── Matrices.java
 │       │       │   │   │   ├── TeoriaAlg.java
 │       │       │   │   │   └── Vectores.java
+│       │       │   │   ├── fisica1/
+│       │       │   │   │   ├── CaidaLibre.java
+│       │       │   │   │   ├── CalcFisica.java
+│       │       │   │   │   ├── Fisica1.java
+│       │       │   │   │   ├── MovAcelerado.java
+│       │       │   │   │   └── SegundaLey.java
 │       │       │   │   ├── humanidades/
 │       │       │   │   │   └── humanidadest.java
 │       │       │   │   └── matematicas2/
