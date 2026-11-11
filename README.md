@@ -130,7 +130,8 @@ Sincelab/
 │       │       │   │   │   ├── CalcFisica.java
 │       │       │   │   │   ├── Fisica1.java
 │       │       │   │   │   ├── MovAcelerado.java
-│       │       │   │   │   └── SegundaLey.java
+│       │       │   │   │   ├── SegundaLey.java
+│       │       │   │   │   └── Theoryf.java
 │       │       │   │   ├── humanidades/
 │       │       │   │   │   └── humanidadest.java
 │       │       │   │   └── matematicas2/
