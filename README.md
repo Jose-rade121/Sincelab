@@ -108,6 +108,12 @@ Sincelab/
 │       ├── java/
 │       │   └── sincelab/
 │       │       ├── storage/
+│       │       │   ├── sesion/
+│       │       │   │   ├── Conexion.java
+│       │       │   │   ├── PuntajeDAO.java
+│       │       │   │   ├── Seguridad.java
+│       │       │   │   ├── Users.java
+│       │       │   │   └── UsuarioDAO.java
 │       │       │   ├── Archive.java
 │       │       │   ├── BancoPreguntas.java
 │       │       │   ├── caidalibre.java
@@ -116,10 +122,7 @@ Sincelab/
 │       │       │   ├── MatrizCuadrada.java
 │       │       │   ├── mua.java
 │       │       │   ├── polinomio.java
-│       │       │   ├── Pregunta.java
 │       │       │   ├── segundaley.java
-│       │       │   ├── Sesion.java
-│       │       │   ├── Users.java
 │       │       │   └── Vector3D.java
 │       │       ├── view/
 │       │       │   ├── curses/
@@ -145,7 +148,9 @@ Sincelab/
 │       │       │   │       └── Theorym.java
 │       │       │   ├── utilities/
 │       │       │   │   ├── Header.java
+│       │       │   │   ├── Pregunta.java
 │       │       │   │   ├── PrincipalFont.java
+│       │       │   │   ├── Sesion.java
 │       │       │   │   ├── Themed.java
 │       │       │   │   ├── Themes.java
 │       │       │   │   └── TheoryBlock.java
@@ -153,6 +158,7 @@ Sincelab/
 │       │       │       ├── AboutWindow.java
 │       │       │       ├── MainWindow.java
 │       │       │       ├── Quizwindow.java
+│       │       │       ├── RankingWindow.java
 │       │       │       └── UiLogin.java
 │       │       └── Main.java
 │       └── resources/
