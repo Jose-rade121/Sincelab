@@ -4,6 +4,7 @@
  */
 package sincelab.storage;
 
+import sincelab.view.utilities.Pregunta;
 import java.util.List;
  
 /**

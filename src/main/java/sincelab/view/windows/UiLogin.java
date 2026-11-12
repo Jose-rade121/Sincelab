@@ -1,186 +1,263 @@
 package sincelab.view.windows;
-
+ 
 import java.awt.*;
+import java.sql.SQLException;
+import java.util.Arrays;
 import javax.swing.*;
-
+ 
+import sincelab.storage.UsuarioDAO;
+import sincelab.storage.sesion.Users;
 import sincelab.view.utilities.PrincipalFont;
+import sincelab.view.utilities.Sesion;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
-import sincelab.storage.Sesion;
-import sincelab.storage.Users;
-
-
-
+ 
 /**
+ * Ventana de acceso: iniciar sesion o crear cuenta.
+ * Al terminar bien, guarda la sesion y ejecuta alTerminar (abre el menu).
  *
  * @author josee
  */
 public class UiLogin extends JFrame implements Themed{
-    
-    public void background(){    
+ 
+    private final Runnable alTerminar;
+ 
+    private JPanel loginPanel;
+    private int altoPanel = 290;
+    private boolean modoRegistro = false;
+ 
+    private final JLabel title = new JLabel();
+    private final JLabel lblNombre = new JLabel("Nombre: ");
+    private final JLabel lblCarrera = new JLabel("Carrera: ");
+    private final JLabel lblUsuario = new JLabel("Usuario: ");
+    private final JLabel lblClave = new JLabel("Contraseña: ");
+ 
+    private final JTextField nombre = new JTextField();
+    private final JTextField carrera = new JTextField();
+    private final JTextField usuario = new JTextField();
+    private final JPasswordField clave = new JPasswordField();
+ 
+    private final JButton enviar = new JButton();
+    private final JButton cambiar = new JButton();
+ 
+    public void background(){
         getContentPane().setBackground(Themes.backgroundC);
         getContentPane().revalidate();
         getContentPane().repaint();
     }
-    
+ 
     public UiLogin(){
         this(null);
-        
     }
-    
+ 
     public UiLogin(Runnable alTerminar){
-      
-    
-    
-        
-         ImageIcon icon = new ImageIcon(
+ 
+        this.alTerminar = alTerminar;
+ 
+        ImageIcon icon = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/guardado.png")
-        ); 
-        
-        
+        );
+ 
         PrincipalFont fontType = new PrincipalFont();
-        
-        JPanel loginPanel = new JPanel(null){
+ 
+        loginPanel = new JPanel(null){
             @Override
             protected void paintComponent(Graphics g){
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
                 g2.setColor(new Color(255,255,255,190));
-                g2.fillRoundRect(10,15,getWidth() - 20, 305, 25, 25);
+                g2.fillRoundRect(10, 10, getWidth() - 20, altoPanel, 25, 25);
                 g2.dispose();
                 super.paintComponent(g);
             }
-        }; 
-       
-        
-        JLabel title = new JLabel();
-        title.setText("REGISTRATE");
+        };
+ 
+        /* Titulo */
         title.setForeground(new Color(32, 17, 82));
         title.setFont(fontType.getFont(fontType.BESTIME, 0 , 20));
-        title.setHorizontalAlignment(title.CENTER);
-        title.setBounds(30,30,260,30);
-        
-        /*
-            Campo de ingreso nombre
-        */
-        JLabel lblnombre = new JLabel("Nombre: ");
-        lblnombre.setForeground(new Color(32, 17, 82));
-        lblnombre.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0 , 15));
-        lblnombre.setBounds(30,90,260,30);
-        /*
-        lblnombre.setBorder(BorderFactory.createCompoundBorder(
-            BorderFactory.createLineBorder(new Color(111,94,171)),
-            BorderFactory.createEmptyBorder(0,8,0,8)
-        ));
-        */
-        JTextField nombre = new JTextField();
-        nombre.setBounds(30,120,260,30);
-        
+        title.setHorizontalAlignment(JLabel.CENTER);
+        title.setBounds(30,20,260,30);
  
-        /*
-            Campo de ingreso carrera
-        */
-        JLabel lblcarrera = new JLabel("Carrera: ");
-        lblcarrera.setForeground(new Color(32, 17, 82));
-        lblcarrera.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0 , 15));
-        lblcarrera.setBounds(30,170,260,30);
-        
-        JTextField carrera = new JTextField();
-        carrera.setBounds(30,200,260,30);
-        
-       
-        /*
-            Boton de enviar
-        */
-       
-        JButton enviar = new JButton();
-        //enviar.setPreferredSize(new Dimension(140,150));
-        enviar.setText("Enviar");
+        /* Etiquetas */
+        for (JLabel l : new JLabel[]{lblNombre, lblCarrera, lblUsuario, lblClave}) {
+            l.setForeground(new Color(32, 17, 82));
+            l.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0 , 15));
+        }
+ 
+        /* Boton principal (Entrar / Crear cuenta) */
         enviar.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 15));
         enviar.setForeground(new Color(255, 255, 255));
         enviar.setBackground(new Color(111, 94, 171));
         enviar.setBorderPainted(false);
         enviar.setFocusPainted(false);
-        enviar.setBounds(95,260,140,38);
-        
-        enviar.addActionListener(e -> {
-            String n = nombre.getText().trim();
-            String c = carrera.getText().trim();
-            if (n.isEmpty() || c.isEmpty()) {
-                JOptionPane.showMessageDialog(this,
-                        "Escribe tu nombre y tu carrera.",
-                        "Dato Invalido",
-                        JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-            Sesion.iniciar(new Users(n, c, 0));
-            dispose();
-            if (alTerminar != null) {
-                alTerminar.run();
-            }
-        });
-        
-        /*
-        private void btnGuardado(java.awt.ActionEvent e){
-            try{
-               String nombre1 = nombre.getText().trim();
-               String carrera2 = carrera.getText().trim();
-               
-            }
-        }
-        */
-        
-        
+        enviar.addActionListener(e -> procesar());
+ 
+        /* Enlace para cambiar entre iniciar sesion y registrarse */
+        cambiar.setFont(fontType.getFont(fontType.NUNITO_BLACK, 0, 12));
+        cambiar.setForeground(new Color(32, 17, 82));
+        cambiar.setBorderPainted(false);
+        cambiar.setContentAreaFilled(false);
+        cambiar.setFocusPainted(false);
+        cambiar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        cambiar.addActionListener(e -> ajustar(!modoRegistro));
+ 
         loginPanel.setOpaque(false);
         loginPanel.add(title);
-        loginPanel.add(lblcarrera);
-        loginPanel.add(lblnombre);
-        loginPanel.add(carrera);
+        loginPanel.add(lblNombre);
         loginPanel.add(nombre);
+        loginPanel.add(lblCarrera);
+        loginPanel.add(carrera);
+        loginPanel.add(lblUsuario);
+        loginPanel.add(usuario);
+        loginPanel.add(lblClave);
+        loginPanel.add(clave);
         loginPanel.add(enviar);
-        loginPanel.setVisible(true);
-        
+        loginPanel.add(cambiar);
+ 
+        ajustar(false);   // empieza en "Iniciar sesion"
+ 
         /*
             Segunda mitad (Imagen)
         */
-       
+ 
         ImageIcon astrona = new ImageIcon(
                 new ImageIcon(getClass().getResource("/sincelab/assets/icons/Astronauta.png"))
                 .getImage().getScaledInstance(220, -1, Image.SCALE_SMOOTH)
         );
-        
+ 
         ImageIcon Fondo = new ImageIcon(
                 getClass().getResource("/sincelab/assets/icons/fondo.jfif")
-        ); 
-        
+        );
+ 
         JPanel fondo = new JPanel(new GridLayout(1,2)) {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 g.drawImage(Fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
-        
         };
         setContentPane(fondo);
-        
+ 
         JPanel loginPanel2 = new JPanel(null);
         loginPanel2.setOpaque(false);
-        
+ 
         JLabel img = new JLabel(astrona);
         img.setBounds((320 - astrona.getIconWidth())/ 2, 15 , astrona.getIconWidth(), astrona.getIconHeight());
         loginPanel2.add(img);
-       
-        
+ 
         setIconImage(icon.getImage());
-        setTitle("Nuevo Registro");
+        setTitle("SINCELAB - Acceso");
         setSize(640,420);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
         add(loginPanel, BorderLayout.WEST);
         add(loginPanel2);
         background();
+        getRootPane().setDefaultButton(enviar);   // Enter = enviar
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+ 
+    /* Muestra u oculta los campos segun el modo y los acomoda */
+    private void ajustar(boolean registro){
+        modoRegistro = registro;
+        title.setText(registro ? "CREAR CUENTA" : "INICIAR SESION");
+ 
+        lblNombre.setVisible(registro);
+        nombre.setVisible(registro);
+        lblCarrera.setVisible(registro);
+        carrera.setVisible(registro);
+ 
+        int y = registro ? 60 : 80;
+ 
+        if (registro) {
+            lblNombre.setBounds(30, y, 260, 20);
+            nombre.setBounds(30, y + 20, 260, 28);
+            y += 55;
+            lblCarrera.setBounds(30, y, 260, 20);
+            carrera.setBounds(30, y + 20, 260, 28);
+            y += 55;
+        }
+ 
+        lblUsuario.setBounds(30, y, 260, 20);
+        usuario.setBounds(30, y + 20, 260, 28);
+        y += 55;
+ 
+        lblClave.setBounds(30, y, 260, 20);
+        clave.setBounds(30, y + 20, 260, 28);
+        y += 60;
+ 
+        enviar.setText(registro ? "Crear cuenta" : "Entrar");
+        enviar.setBounds(95, y, 140, 36);
+        y += 44;
+ 
+        cambiar.setText(registro ? "¿Ya tienes cuenta? Inicia sesion" : "¿No tienes cuenta? Registrate");
+        cambiar.setBounds(30, y, 260, 22);
+ 
+        altoPanel = y + 26;
+        clave.setText("");
+        loginPanel.revalidate();
+        loginPanel.repaint();
+    }
+ 
+    private void aviso(String mensaje){
+        JOptionPane.showMessageDialog(this, mensaje, "Dato Invalido", JOptionPane.ERROR_MESSAGE);
+    }
+ 
+    /* Registra o inicia sesion, segun el modo */
+    private void procesar(){
+        String u = usuario.getText().trim();
+        char[] pass = clave.getPassword();
+ 
+        try {
+            if (u.isEmpty() || pass.length == 0) {
+                aviso("Escribe tu usuario y tu contraseña.");
+                return;
+            }
+ 
+            UsuarioDAO.Cuenta cuenta;
+ 
+            if (modoRegistro) {
+                String n = nombre.getText().trim();
+                String c = carrera.getText().trim();
+ 
+                if (n.isEmpty() || c.isEmpty()) {
+                    aviso("Escribe tu nombre y tu carrera.");
+                    return;
+                }
+                if (u.length() < 3) {
+                    aviso("El usuario debe tener minimo 3 caracteres.");
+                    return;
+                }
+                if (pass.length < 8) {
+                    aviso("La contraseña debe tener minimo 8 caracteres.");
+                    return;
+                }
+ 
+                cuenta = UsuarioDAO.registrar(u, n, c, pass);
+                if (cuenta == null) {
+                    aviso("Ese usuario ya existe. Elige otro.");
+                    return;
+                }
+            } else {
+                cuenta = UsuarioDAO.iniciarSesion(u, pass);
+                if (cuenta == null) {
+                    aviso("Usuario o contraseña incorrectos.");
+                    return;
+                }
+            }
+ 
+            Sesion.iniciar(new Users(cuenta.nombre(), cuenta.carrera(), cuenta.puntos()), cuenta.id());
+            dispose();
+            if (alTerminar != null) {
+                alTerminar.run();
+            }
+ 
+        } catch (SQLException | RuntimeException ex) {
+            aviso("No se pudo conectar con la base de datos. Revisa que MariaDB este encendida y que el .env exista.");
+        } finally {
+            Arrays.fill(pass, ' ');
+        }
     }
  
 }

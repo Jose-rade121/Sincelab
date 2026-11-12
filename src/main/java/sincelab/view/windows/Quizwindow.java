@@ -10,9 +10,9 @@ import java.util.List;
 import javax.swing.*;
  
 import sincelab.storage.BancoPreguntas;
-import sincelab.storage.Pregunta;
-import sincelab.storage.Sesion;
-import sincelab.storage.Users;
+import sincelab.view.utilities.Pregunta;
+import sincelab.view.utilities.Sesion;
+import sincelab.storage.sesion.Users;
 import sincelab.view.utilities.Header;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
