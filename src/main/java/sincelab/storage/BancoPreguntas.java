@@ -107,7 +107,115 @@ public final class BancoPreguntas {
                 "\"Angulo entre vectores: 0.00 grados\" y \"Producto cruz: (0.0,0.0,0.0)\"",
                 "\"Angulo entre vectores: 90.00 grados\" y \"Producto cruz: (1.0,0.0,0.0)\"",
                 "\"Angulo entre vectores: 90.00 grados\" y \"Producto cruz: (0.0,0.0,1.0)\"")
+        ); 
+    }
+    
+    public static List<Pregunta> fisica(){
+        return List.of(
+                new Pregunta("Un automovil parte del reposo y alcanza 25 m/s en 10 segundos ¿Cual es su aceleracion?",1,
+                    "La aceleracion es de 2.5 m/s^2. Poruqe la velocidad aumenta 25 m/s en 10 segundos",
+                    "1.5 m/s^2", "2.5 m/s^2", "3.5 m/s^2", "5 m/s^2"),
+                
+                new Pregunta("Una motocicleta viaja a 30 m/s y frena uniformemente hasta detenerse en 5 segundos. ¿Que distancia recorre durante el frenado?",
+                    2,"Ocurre de forma progresiva cuando la aceleracion actua en direccion contraria al desplazamiento, provocando una disminucion progresica de la velocidad",  
+                    "50 m", "60 m", "75 m", "90 m"),
+                
+                new Pregunta("Una pelota se deja caer desde el reposo durante 3 segundos. ¿Que velocidad alcanza?",2,
+                    "Movimiento vertical de un objeto bajo acto de la gravedad, que desprecia la resistencia del aire",
+                    "19.6 m/s", "24.5 m/s", "29.4 m/s", "32.4 m/s"),
+                
+                new Pregunta("Una pelota es lanzada verticalmente hacia arriba con una velocidad inicial de 19.6 m/s. ¿Cuanto tarda en alcanzar la altura maxima",1,
+                    "Movimiento vertical del objeto lanzado desde arriba, cuya velocidad disminuye por efecto de la gravedad hasta llegar a 0 en su altura",
+                    "1 s", "2 s", "3 s", "4 s"),
+                
+                new Pregunta("Un bloque de 12 kg recibe 60 N hacia la derecha y 24 N hacia la izquierda ¿Cual es su aceleracion?",1,
+                    " Establece la aceleracion de un cuerpo que depende de la fuerza neta aplicada y su masa",
+                    "2 m/s^2", "3 m/s^2", "4 m/s^2", "7 m/s^2"),
+                
+                new Pregunta("Un bloque de 20 kg tiene un coeficiente de friccion cinetica de 0.25. ¿Cual es la fueza de friccion en la superficie horizontal?",2,
+                    "Fuerza opuesta al movimiento de un objeto el cual se desliza sobre una superficie",
+                    "24.5 N", "39.2 N", "49 N", "98 N"),
+                
+                new Pregunta("Una masa de 8 kg asciende con una aceleracion de 2 m/s^2 ¿Cual es la tension de la cuerda?",2,
+                    "Fuerza que le es transmitida a la cuerda en cuando esta se somete a traccion. Su valor depende de los valores de la aceleracion en todo el sistema",
+                    "62.4 N", "78.4 N", "94.4 N", "98.4 N"),
+                
+                new Pregunta("Dos masas de 4 kg y 7kg estan conectadas mediante una polea ideal ¿Cual es la aceleracion del sistema?",1,
+                    " Sistema de dos masas conectadas por una cuerda y una polea, cuyo movimiento depende de las diferencias de peso",
+                    "1.8 m/s^2", "2.67 m/s^2", "3.5 m/s^2", "4.9 m/s^2"),
+                
+                new Pregunta("Un bloque de 10 kg baja por un pano de 30 grados. ¿Cual es la componente de su peso paralelo al plano?",2,
+                    "Superficie inclinada donde el peso se descompone en componentes paralelas y perpendiculares a la superficie",
+                    "24.5 N", "39.2 N", "49 N", "84.9 N"),
+                
+                new Pregunta("Un bloque de 10 kg sobre una mesa rugosa (coeficiente friccion = 0.15) esta conectado a una masa suspendida de 5 kg ¿Cual es la aceleracion del sistema?",0,
+                    "sistema que integra varios principios de la dinamica, como tension, friccion y segunda ley de Newton, para determinar el movimiento de cuerpos conectados",
+                    "2.29 m/s^2", "2.94 m/s^2", "3.27 m/s^2", "4.9 m/s^2")
+        );
+    }
+    
+    public static List<Pregunta> humanidades(){
+        return List.of(
+                new Pregunta("¿Cual es el objetivo principal de las humanidades?",1,
+                    "Las humanidades estudian al ser humano desde prespectivas como la historia la filosofia, el arte y la cultura, permitiendo comprender su desarrollo y comportamiento",
+                    "Estudiar exclusivamente los fenomenos naturales", "Comprender al ser humano, su pensamiento, cultural e historia", "Desarrollar unicamente conocimiento matematicos",
+                    "Analizar solamente los avances tecnologicos"),
+                
+                new Pregunta("¿Que caracteriza al pensamiento critico?",
+                    2,"El pensamiento critico permite examinar el argumento y evidencias antes de aceptar una afirmacion o tomar una decision",  
+                    "Aceptar todo sin cuestionar", "Defender siempre las opiniones propias", "Analizar informacion, evaluar evidencias y formular juicios razonados",
+                    "Rechazar cualquier opinion diferente"),
+                
+                new Pregunta("¿Que es una falacia argumentativa?",0,
+                    "Una falacia es un error de razonamiento que puede hacer que un argumento parezca convincente aunque no tenga una estructura logica valida",
+                    "Un razonamiento que parece valido, pero contiene un error logico", "Una conclusion respaldada por evidencias suficientes", "Una pregunta que no tiene respuesta", 
+                    "Una explicacion cientifica comprobada"),
+                
+                new Pregunta("¿Que estrategia favorece la comprension lectora",3,
+                    "La comprension lectora requiere interpretar la informacion, reconocer las ideas centrales y establecer relaciones entre diferentes partes del texto",
+                    "Leer rapidamente sin prestar atencion", "Memorizar todas las palabras del texto", "Evitar Relacionar el texto con conocimientos previos", "Identificar ideas principales, inferir en significados y analizar el contexto"),
+                
+                new Pregunta("¿Cual es la mejor forma de evitar el plagio al usar las ideas de otro autor?", 2,
+                    "El plagio es presentar ideas ajenas como propias. Se evita citando al autor, por ejemplo con las normas APA, y parafraseando con palabras propias.",
+                    "Cambiar solo algunas palabras sin mencionar al autor",
+                    "Copiar el texto exacto sin usar comillas",
+                    "Citar la fuente y parafrasear con palabras propias",
+                    "Mezclar varios textos sin indicar de donde vienen"),
+                
+                new Pregunta("¿Cual de estas es una fuente primaria?", 1,
+                    "Las fuentes primarias se producen en la epoca que se estudia, como cartas, diarios y leyes. Los libros y documentales son fuentes secundarias porque interpretan esas fuentes despues.",
+                    "Un libro de texto sobre una guerra",
+                    "Una carta escrita por un soldado durante esa guerra",
+                    "Un articulo que analiza las causas de esa guerra",
+                    "Un documental sobre esa guerra"),
+                
+                new Pregunta("¿A que filosofo se le atribuye la frase \"pienso, luego existo\"?", 3,
+                    "Descartes uso la duda metodica para buscar una certeza: si duda, esta pensando, y si piensa, existe.",
+                    "Platon",
+                    "Aristoteles",
+                    "Kant",
+                    "Descartes"),
+                
+                new Pregunta("Segun el utilitarismo, ¿cuando una accion es correcta?", 0,
+                    "El utilitarismo (Bentham y Mill) juzga las acciones por sus consecuencias. La deontologia de Kant se centra en el deber, y la etica de las virtudes de Aristoteles, en el caracter.",
+                    "Cuando produce el mayor bienestar para el mayor numero de personas",
+                    "Cuando cumple el deber sin importar el resultado",
+                    "Cuando ayuda a formar un buen caracter",
+                    "Cuando beneficia solo a quien la realiza"),
+                
+                new Pregunta("¿Que es el etnocentrismo?", 2,
+                    "El etnocentrismo toma la propia cultura como medida de las demas. Lo contrario es el relativismo cultural, que entiende cada cultura desde su propio contexto.",
+                    "Entender cada cultura desde su propio contexto",
+                    "El intercambio mundial de informacion e ideas",
+                    "Juzgar a otras culturas con los valores de la propia",
+                    "El conjunto de costumbres y creencias de un grupo"),
+                
+                new Pregunta("¿Cual es el rasgo principal del realismo magico?", 1,
+                    "El realismo magico presenta hechos extraordinarios como algo normal en la vida cotidiana. Su figura mas conocida es Gabriel Garcia Marquez, con Cien anos de soledad (1967).",
+                    "Describe solo hechos historicos comprobados",
+                    "Presenta hechos extraordinarios como algo normal",
+                    "Se escribe unicamente en verso",
+                    "Rechaza a los personajes y la trama")
         );
     }
 }
- 

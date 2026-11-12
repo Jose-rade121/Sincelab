@@ -63,12 +63,14 @@ public class Quizwindow extends JFrame implements Themed {
             new Quizwindow(materia, preguntas, volver);
             origen.dispose();
         };
- 
+        
+        
         if (Sesion.actual() == null) {
             new UiLogin(iniciar);
         } else {
             iniciar.run();
         }
+        
     }
  
     /* Panel blanco con borde redondeado */

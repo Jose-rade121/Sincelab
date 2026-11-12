@@ -2,10 +2,12 @@ package sincelab.view.curses.fisica1;
 
 import java.awt.*;
 import javax.swing.*;
+import sincelab.storage.BancoPreguntas;
 import sincelab.view.utilities.Header;
 import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
+import sincelab.view.windows.Quizwindow;
 
 
 
@@ -46,36 +48,49 @@ public class Fisica1 extends JFrame implements Themed{
         titulo.setText("Fisica 1");
         titulo.setForeground(new Color(59,130,246));
         titulo.setFont(fontType.getFont(fontType.BESTIME, 0 ,30));
-        titulo.setBounds(0,90,500,50);
+        titulo.setBounds(0,40,500,50);
         titulo.setHorizontalAlignment(JLabel.CENTER);
 
-        JButton movimiento = Boton("Movimiento uniformemente acelerado", 180, fontType);
+        JButton movimiento = Boton("Movimiento uniformemente acelerado", 100, fontType);
 
         movimiento.addActionListener(e -> {
             new MovAcelerado();
             dispose();
         });
 
-        JButton newton = Boton("Segunda ley de Newton", 280, fontType);
+        JButton newton = Boton("Segunda ley de Newton", 200, fontType);
 
         newton.addActionListener(e -> {
             new SegundaLey();
             dispose();
         });
 
-        JButton caida = Boton("Caida libre", 380, fontType);
+        JButton caida = Boton("Caida libre", 300, fontType);
 
         caida.addActionListener(e -> {
             new CaidaLibre();
             dispose();
         });
         
-        JButton teoria = Boton("Teoria", 480, fontType);
+        JButton teoria = Boton("Teoria", 400, fontType);
         
         teoria.addActionListener(e -> {
             new Theoryf();
             dispose();
         });
+        
+        JButton quiz = new JButton();
+        quiz.setText("Quiz");
+        quiz.setBorderPainted(false);
+        quiz.setFocusPainted(false);
+        quiz.setContentAreaFilled(true);
+        quiz.setBackground(new Color(59,130,246));
+        quiz.setForeground(new Color(255,255,255));
+        quiz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        quiz.setBounds(70,500,360,80);
+ 
+        quiz.addActionListener(e -> Quizwindow.abrir(
+                this, "fisica", BancoPreguntas.fisica(), Fisica1::new));
         
         zona.setLayout(null);
         zona.add(movimiento);
@@ -83,7 +98,7 @@ public class Fisica1 extends JFrame implements Themed{
         zona.add(caida);
         zona.add(titulo);
         zona.add(teoria);
-
+        zona.add(quiz);
 
         //Disposiciones de la ventana
 

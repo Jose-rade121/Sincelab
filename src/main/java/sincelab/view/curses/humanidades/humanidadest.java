@@ -2,6 +2,7 @@ package sincelab.view.curses.humanidades;
 
 import java.awt.*;
 import javax.swing.*;
+import sincelab.storage.BancoPreguntas;
 import sincelab.view.curses.matematicas2.Matematicas2;
 import sincelab.view.utilities.Header;
 import sincelab.view.utilities.PrincipalFont;
@@ -9,6 +10,7 @@ import sincelab.view.utilities.Themes;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.TheoryBlock;
 import sincelab.view.windows.MainWindow;
+import sincelab.view.windows.Quizwindow;
 
 /**
  *
@@ -142,6 +144,7 @@ public class humanidadest extends JFrame implements Themed{
                           <li>Apelación a la autoridad: es cierto porque lo dijo alguien famoso, aunque no sea experto.</li>
                           <li>Apelación a la mayoría: es cierto porque todos lo creen.</li>
                           <li>Pendiente resbaladiza: afirmar sin pruebas que un paso llevará a consecuencias desastrosas.</li>
+                          <li>Falacia Argumentativa: Una falacia es un error de razonamiento que puede hacer que un argumento parezca convincente aunque no tenga una estructura logica valida</li>
                           <li>Post hoc: creer que, si B ocurrió después de A, entonces A fue la causa.</li>
                         </ul>
                 </body></html>
@@ -331,6 +334,19 @@ public class humanidadest extends JFrame implements Themed{
         });
         
         
+        JButton quiz = new JButton();
+        quiz.setText("Quiz");
+        quiz.setBorderPainted(false);
+        quiz.setFocusPainted(false);
+        quiz.setContentAreaFilled(true);
+        quiz.setBackground(new Color(111, 94, 171));
+        quiz.setForeground(new Color(255, 255, 255));
+        quiz.setFont(fontType.getFont(fontType.HEY_COMIC, 0, 15));
+        quiz.setBounds(220,560,140,38);
+ 
+        quiz.addActionListener(e -> Quizwindow.abrir(
+                this, "Algebra Lineal", BancoPreguntas.humanidades(), humanidadest::new));
+        
         
         Siguiente.setBounds(740,560,140,38);
         Siguiente.setBorderPainted(false);
@@ -375,6 +391,7 @@ public class humanidadest extends JFrame implements Themed{
         pie.add(ret);
         pie.add(Atras);
         pie.add(Siguiente);
+        pie.add(quiz);
         add(pie, BorderLayout.SOUTH);
         
         mostrar(0);

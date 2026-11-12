@@ -9,8 +9,9 @@ import java.util.Collections;
 import java.util.List;
  
 
-// autor @Angel
+
 /**
+ * autor @Angel
  * Una pregunta de opcion multiple con 4 opciones y una sola correcta.
  */
 public class Pregunta {

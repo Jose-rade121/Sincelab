@@ -83,7 +83,7 @@ public class Matematicas2 extends JFrame implements Themed{
             new Theorym();
             dispose();
         });
-            JButton quiz = new JButton();
+        JButton quiz = new JButton();
         quiz.setText("Quiz");
         quiz.setBorderPainted(false);
         quiz.setFocusPainted(false);
