@@ -6,10 +6,12 @@ package sincelab.view.windows;
 
 
 import java.awt.*;
+import java.sql.SQLException;
 import java.util.List;
 import javax.swing.*;
  
 import sincelab.storage.BancoPreguntas;
+import sincelab.storage.PuntajeDAO;
 import sincelab.view.utilities.Pregunta;
 import sincelab.view.utilities.Sesion;
 import sincelab.storage.sesion.Users;
@@ -355,7 +357,16 @@ public class Quizwindow extends JFrame implements Themed {
             return;
         }
  
-        usuario.sumarPuntaje(puntos);
+        // Guardar en la base de datos (allí se conserva el mejor puntaje por materia)
+        // y usar el total que queda guardado para mostrarlo.
+        try {
+            PuntajeDAO.guardar(materia, puntos);
+        } catch (SQLException | RuntimeException ex) {
+            lblTotal.setText("Puntaje de " + usuario.getNombre() + ": " + usuario.getPuntaje()
+                    + " (no se pudo guardar en el ranking)");
+            return;
+        }
+
         lblTotal.setText("Puntaje de " + usuario.getNombre() + ": " + usuario.getPuntaje());
     }
  

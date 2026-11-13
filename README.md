@@ -223,4 +223,61 @@ Sincelab/
 * Users --> Informacion de los usuarios.
 
 
+<img src="https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Star%20Light%20Line.gif" width="100%">
+
+## Puesta en marcha (base de datos y ejecución)
+
+> Requisitos: **JDK 21** y **Docker** (con Docker Compose). El proyecto incluye **Maven Wrapper**, así que no hace falta instalar Maven aparte.
+
+### 1) Configurar el `.env`
+
+En la raíz del proyecto, crea tu `.env` a partir de `.env.example` y completa los valores:
+
+```env
+DB_ROOT_PASSWORD=tu_clave_root
+DB_APP_PASSWORD=tu_clave_de_la_app
+DB_URL=jdbc:mariadb://localhost:3306/users
+DB_USER=Registros_app
+```
+
+### 2) Levantar la base de datos
+
+```bash
+docker compose up -d
+```
+
+Esto inicia `Registros-db` (MariaDB 11 en el puerto `3306`) y phpMyAdmin (`http://localhost:8080`).
+
+**Importante:** el script `db/init.sql` se ejecuta automáticamente **solo cuando el volumen se crea por primera vez**. Si ya tenías el volumen `datos_mariadb` de antes, aplica el esquema manualmente una sola vez:
+
+```bash
+docker exec -i Registros-db mariadb -uRegistros_app -p "TU_DB_APP_PASSWORD" < db/init.sql
+```
+
+El script es idempotente (`CREATE TABLE IF NOT EXISTS`), así que no borra datos existentes.
+
+### 3) Compilar y ejecutar
+
+```bash
+# Compilar y empaquetar
+./mvnw -DskipTests package      # En Windows: .\mvnw.cmd -DskipTests package
+
+# Ejecutar la aplicación (requiere entorno gráfico)
+./mvnw exec:java                # En Windows: .\mvnw.cmd exec:java
+```
+
+La aplicación abre primero la ventana de **inicio de sesión/registro** y, al entrar, la ventana principal.
+
+### 4) Probar la capa de datos (sin interfaz)
+
+Con la base encendida y el esquema aplicado:
+
+```bash
+./mvnw -q test-compile exec:java -Dexec.mainClass=sincelab.tests.DaoSmoke -Dexec.classpathScope=test
+```
+
+La prueba de humo valida registro, usuario duplicado, login, contraseña incorrecta, guardado de puntajes y ranking.
+
+> **Nota:** si tu `docker-compose` no encuentra el comando `exec`/`compose`, usa `docker-compose` en todas las instrucciones anteriores.
+
 ![Pixel Cat](https://raw.githubusercontent.com/Mayur-Pagote/README_Design_Kit/main/public/Assets/Pixel%20Cat.gif) 
