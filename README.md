@@ -103,90 +103,102 @@ git push    #Envia a GitHub
 <!-- TREE:START -->
 ```text
 Sincelab/
+├── .mvn/
+│   └── wrapper/
+│       └── maven-wrapper.properties
+├── db/
+│   └── init.sql
 ├── src/
-│   └── main/
-│       ├── java/
-│       │   └── sincelab/
-│       │       ├── storage/
-│       │       │   ├── sesion/
-│       │       │   │   ├── Conexion.java
-│       │       │   │   ├── PuntajeDAO.java
-│       │       │   │   ├── Seguridad.java
-│       │       │   │   ├── Users.java
-│       │       │   │   └── UsuarioDAO.java
-│       │       │   ├── Archive.java
-│       │       │   ├── BancoPreguntas.java
-│       │       │   ├── caidalibre.java
-│       │       │   ├── derivada.java
-│       │       │   ├── integrales.java
-│       │       │   ├── MatrizCuadrada.java
-│       │       │   ├── mua.java
-│       │       │   ├── polinomio.java
-│       │       │   ├── segundaley.java
-│       │       │   └── Vector3D.java
-│       │       ├── view/
-│       │       │   ├── curses/
-│       │       │   │   ├── algebralineal/
-│       │       │   │   │   ├── AlgLineal.java
-│       │       │   │   │   ├── Matrices.java
-│       │       │   │   │   ├── TeoriaAlg.java
-│       │       │   │   │   └── Vectores.java
-│       │       │   │   ├── fisica1/
-│       │       │   │   │   ├── CaidaLibre.java
-│       │       │   │   │   ├── CalcFisica.java
-│       │       │   │   │   ├── Fisica1.java
-│       │       │   │   │   ├── MovAcelerado.java
-│       │       │   │   │   ├── SegundaLey.java
-│       │       │   │   │   └── Theoryf.java
-│       │       │   │   ├── humanidades/
-│       │       │   │   │   └── humanidadest.java
-│       │       │   │   └── matematicas2/
-│       │       │   │       ├── Derivadas.java
-│       │       │   │       ├── Integrales.java
-│       │       │   │       ├── Matematicas2.java
-│       │       │   │       ├── TecDevInt.java
-│       │       │   │       └── Theorym.java
-│       │       │   ├── utilities/
-│       │       │   │   ├── Header.java
-│       │       │   │   ├── Pregunta.java
-│       │       │   │   ├── PrincipalFont.java
-│       │       │   │   ├── Sesion.java
-│       │       │   │   ├── Themed.java
-│       │       │   │   ├── Themes.java
-│       │       │   │   └── TheoryBlock.java
-│       │       │   └── windows/
-│       │       │       ├── AboutWindow.java
-│       │       │       ├── MainWindow.java
-│       │       │       ├── Quizwindow.java
-│       │       │       ├── RankingWindow.java
-│       │       │       └── UiLogin.java
-│       │       └── Main.java
-│       └── resources/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── sincelab/
+│   │   │       ├── storage/
+│   │   │       │   ├── sesion/
+│   │   │       │   │   └── Users.java
+│   │   │       │   ├── Archive.java
+│   │   │       │   ├── BancoPreguntas.java
+│   │   │       │   ├── caidalibre.java
+│   │   │       │   ├── Conexion.java
+│   │   │       │   ├── derivada.java
+│   │   │       │   ├── integrales.java
+│   │   │       │   ├── MatrizCuadrada.java
+│   │   │       │   ├── mua.java
+│   │   │       │   ├── polinomio.java
+│   │   │       │   ├── PuntajeDAO.java
+│   │   │       │   ├── segundaley.java
+│   │   │       │   ├── Seguridad.java
+│   │   │       │   ├── UsuarioDAO.java
+│   │   │       │   └── Vector3D.java
+│   │   │       ├── view/
+│   │   │       │   ├── curses/
+│   │   │       │   │   ├── algebralineal/
+│   │   │       │   │   │   ├── AlgLineal.java
+│   │   │       │   │   │   ├── Matrices.java
+│   │   │       │   │   │   ├── TeoriaAlg.java
+│   │   │       │   │   │   └── Vectores.java
+│   │   │       │   │   ├── fisica1/
+│   │   │       │   │   │   ├── CaidaLibre.java
+│   │   │       │   │   │   ├── CalcFisica.java
+│   │   │       │   │   │   ├── Fisica1.java
+│   │   │       │   │   │   ├── MovAcelerado.java
+│   │   │       │   │   │   ├── SegundaLey.java
+│   │   │       │   │   │   └── Theoryf.java
+│   │   │       │   │   ├── humanidades/
+│   │   │       │   │   │   └── humanidadest.java
+│   │   │       │   │   └── matematicas2/
+│   │   │       │   │       ├── Derivadas.java
+│   │   │       │   │       ├── Integrales.java
+│   │   │       │   │       ├── Matematicas2.java
+│   │   │       │   │       ├── TecDevInt.java
+│   │   │       │   │       └── Theorym.java
+│   │   │       │   ├── utilities/
+│   │   │       │   │   ├── Header.java
+│   │   │       │   │   ├── Pregunta.java
+│   │   │       │   │   ├── PrincipalFont.java
+│   │   │       │   │   ├── Sesion.java
+│   │   │       │   │   ├── Themed.java
+│   │   │       │   │   ├── Themes.java
+│   │   │       │   │   └── TheoryBlock.java
+│   │   │       │   └── windows/
+│   │   │       │       ├── AboutWindow.java
+│   │   │       │       ├── MainWindow.java
+│   │   │       │       ├── Quizwindow.java
+│   │   │       │       ├── RankingWindow.java
+│   │   │       │       └── UiLogin.java
+│   │   │       └── Main.java
+│   │   └── resources/
+│   │       └── sincelab/
+│   │           └── assets/
+│   │               ├── fonts/
+│   │               │   ├── Bestime.otf
+│   │               │   ├── Bestime.ttf
+│   │               │   ├── Hey_Comic.ttf
+│   │               │   ├── Nunito-Black.ttf
+│   │               │   └── Stay_With_Me.otf
+│   │               ├── icons/
+│   │               │   ├── astronaunt-icon.png
+│   │               │   ├── Astronauta.png
+│   │               │   ├── fondo.jfif
+│   │               │   ├── guardado.png
+│   │               │   ├── icon.png
+│   │               │   ├── moon_black.png
+│   │               │   └── moon_white.png
+│   │               └── repo_images/
+│   │                   ├── GIT _REMOTE.PNG
+│   │                   ├── GIT_ADD_COMMIT.PNG
+│   │                   ├── GIT_PULL.PNG
+│   │                   ├── GIT_PUSH.PNG
+│   │                   └── GIT_STATUS.PNG
+│   └── test/
+│       └── java/
 │           └── sincelab/
-│               └── assets/
-│                   ├── fonts/
-│                   │   ├── Bestime.otf
-│                   │   ├── Bestime.ttf
-│                   │   ├── Hey_Comic.ttf
-│                   │   ├── Nunito-Black.ttf
-│                   │   └── Stay_With_Me.otf
-│                   ├── icons/
-│                   │   ├── astronaunt-icon.png
-│                   │   ├── Astronauta.png
-│                   │   ├── fondo.jfif
-│                   │   ├── guardado.png
-│                   │   ├── icon.png
-│                   │   ├── moon_black.png
-│                   │   └── moon_white.png
-│                   └── repo_images/
-│                       ├── GIT _REMOTE.PNG
-│                       ├── GIT_ADD_COMMIT.PNG
-│                       ├── GIT_PULL.PNG
-│                       ├── GIT_PUSH.PNG
-│                       └── GIT_STATUS.PNG
+│               └── tests/
+│                   └── DaoSmoke.java
 ├── .env.example
 ├── .gitignore
 ├── docker-compose.yml
+├── mvnw
+├── mvnw.cmd
 ├── nb-configuration.xml
 ├── nbactions.xml
 ├── pom.xml
