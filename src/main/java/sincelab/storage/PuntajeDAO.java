@@ -10,7 +10,14 @@ import sincelab.view.utilities.Sesion;
  
 /**
  * Guarda puntajes y arma el ranking.
- * El usuario siempre sale de Sesion (quien inicio sesion), nunca de un texto escrito.
+ *El usuario siempre sale de Sesion (quien inicio sesion), nunca de un texto escrito.
+ * Objeto de Acceso a Datos (DAO) encargado de persistir los puntajes obtenidos
+ * en los cuestionarios y consultar la tabla de posiciones (ranking) en la base de datos.
+ * Vincula las operaciones directamente con el usuario autenticado en {@link Sesion}.
+ *
+ * @author Equipo SINCELAB
+ * @version 1.0
+ * @since JDK 16 (Requiere soporte para records)
  */
 public final class PuntajeDAO {
  

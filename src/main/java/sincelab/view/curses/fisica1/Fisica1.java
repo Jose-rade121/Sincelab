@@ -12,8 +12,14 @@ import sincelab.view.windows.Quizwindow;
 
 
 /**
+* Responsabilidad: menu del area Fisica 1. Tiene botones para las calculadoras de
+ * movimiento uniformemente acelerado, segunda ley de Newton y caida libre, y para la
+ * teoria y el quiz de la materia.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author alejo
+ * @version 1.0
  */
 public class Fisica1 extends JFrame implements Themed{
 

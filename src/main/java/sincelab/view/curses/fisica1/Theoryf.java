@@ -11,8 +11,14 @@ import sincelab.view.utilities.TheoryBlock;
 import sincelab.view.windows.MainWindow;
 
 /**
+ * Responsabilidad: ventana de teoria de Fisica 1. Muestra cinco capitulos en bloques
+ * HTML (movimiento uniformemente acelerado, segunda ley de Newton y caida libre) con
+ * botones Atras y Siguiente para recorrerlos.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class Theoryf extends JFrame implements Themed{
     

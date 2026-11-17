@@ -7,7 +7,13 @@ package sincelab.storage;
 import java.util.Arrays;
 /**
  *
+ * /**
+ * Responsabilidad: calcula la derivada de un polinomio aplicando
+ * la regla de la potencia.
+ *
  * @author Angel
+ * @version 1.0
+ * @since JDK 11
  */
 
 public class polinomio {

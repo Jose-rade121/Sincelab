@@ -2,8 +2,13 @@
 package sincelab.storage;
 
 /**
+ * Representa una matriz cuadrada inmutable de dimensiones n x n y proporciona
+ * operaciones fundamentales de álgebra lineal como el cálculo del determinante
+ * y la obtención de la matriz inversa mediante eliminación gaussiana con pivoteo parcial.
  *
  * @author josee
+ * @version 1.0
+ * @since JDK 11
  */
 public class MatrizCuadrada {
     

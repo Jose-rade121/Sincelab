@@ -1,7 +1,10 @@
 package sincelab.tests;
 
 import sincelab.storage.PuntajeDAO;
+import sincelab.storage.PuntajeDAO;
 import sincelab.storage.UsuarioDAO;
+import sincelab.storage.UsuarioDAO;
+import sincelab.storage.sesion.Users;
 import sincelab.storage.sesion.Users;
 import sincelab.view.utilities.Sesion;
 
@@ -12,7 +15,7 @@ import sincelab.view.utilities.Sesion;
  * Ejecutar (con la base encendida y el esquema aplicado):
  *   mvn -q test-compile exec:java -Dexec.mainClass=sincelab.storage.DaoSmoke -Dexec.classpathScope=test
  */
-public class DaoSmoke {
+public class DaoSmoke_otro {
 
     private static int fallos = 0;
 

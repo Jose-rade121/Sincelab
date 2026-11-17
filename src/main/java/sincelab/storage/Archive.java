@@ -7,8 +7,12 @@ import java.util.ArrayList;
 
 
 /**
+* Clase auxiliar destinada a la gestión de directorios locales y registro de archivos
+ * de usuario en el sistema de almacenamiento local (actualmente en desuso/prototipo).
  *
  * @author josee
+ * @version 1.0
+ * @since JDK 11
  */
 public class Archive{
     /*

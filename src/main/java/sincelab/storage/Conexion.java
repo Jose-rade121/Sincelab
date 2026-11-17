@@ -10,6 +10,9 @@ import java.sql.SQLException;
  * - Busca el .env en el directorio desde donde se ejecuta (la raiz del proyecto).
  * - Si no hay .env, usa las variables de entorno del sistema.
  * - Si falta alguna variable, falla con un mensaje claro.
+ *  @author 
+ * @version 1.0
+ * @since JDK 11
  */
 public final class Conexion {
 

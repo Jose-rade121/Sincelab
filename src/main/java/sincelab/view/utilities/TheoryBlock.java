@@ -6,8 +6,13 @@ import javax.swing.*;
 import sincelab.view.utilities.PrincipalFont;
 
 /**
+ * Responsabilidad: bloque de teoria: panel blanco con borde, un titulo y un area de
+ * texto HTML con scroll, para mostrar explicaciones teoricas.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class TheoryBlock extends JPanel{
     

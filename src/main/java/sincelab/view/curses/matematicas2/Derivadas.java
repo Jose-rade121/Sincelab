@@ -10,8 +10,14 @@ import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 /**
+ * Responsabilidad: ventana de la calculadora de derivadas. Lee un polinomio y un punto
+ * x y muestra la funcion, su derivada y el valor de la derivada en ese punto, usando
+ * las clases polinomio y derivada. Incluye un teclado en pantalla.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author Angel
+ * @version 1.0
  */
 public class Derivadas extends JFrame implements Themed {
  

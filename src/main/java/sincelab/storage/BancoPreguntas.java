@@ -11,6 +11,10 @@ import java.util.List;
  * Banco de preguntas del quiz. Cada pregunta correcta vale PUNTOS_POR_PREGUNTA.
  * El tercer argumento de Pregunta es la explicacion que se muestra al responder;
  * el segundo es la posicion de la opcion correcta (0 = A, 1 = B, 2 = C, 3 = D).
+ *
+ * @author Angel
+ * @version 1.0
+ * @since JDK 11 (Requiere List.of)
  */
 public final class BancoPreguntas {
  

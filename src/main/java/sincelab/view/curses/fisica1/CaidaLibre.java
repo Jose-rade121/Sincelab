@@ -3,8 +3,14 @@ package sincelab.view.curses.fisica1;
 import sincelab.storage.caidalibre;
 
 /**
+ * Responsabilidad: calculadora de caida libre: calcula la velocidad final, la altura o
+ * el tiempo de caida a partir de la velocidad inicial y la gravedad, usando la clase
+ * caidalibre. De CalcFisica hereda la ventana, los campos y los botones.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author alejo
+ * @version 1.0
  */
 public class CaidaLibre extends CalcFisica {
 

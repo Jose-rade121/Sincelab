@@ -13,9 +13,17 @@ import sincelab.view.windows.MainWindow;
 import sincelab.view.windows.Quizwindow;
 
 /**
+ /**
+ * Interfaz gráfica correspondiente al módulo de Humanidades I.
+ * Su responsabilidad es presentar el contenido teórico estructurado por capítulos
+ * a manera de tutorial interactivo, permitiendo la navegación secuencial entre temas
+ * y el acceso a la evaluación (cuestionario) del área.
  *
  * @author josee
+ * @version 1.0
+ * @since JDK 17 (Plataforma JDK mínima requerida para bloques de texto)
  */
+ 
 public class humanidadest extends JFrame implements Themed{
     
     private Header header;

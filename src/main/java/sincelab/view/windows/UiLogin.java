@@ -15,7 +15,8 @@ import sincelab.view.utilities.Themes;
 /**
  * Ventana de acceso: iniciar sesion o crear cuenta.
  * Al terminar bien, guarda la sesion y ejecuta alTerminar (abre el menu).
- *
+ * ejecuta la accion alTerminar (por ejemplo, abrir el menu o el quiz).
+ * Plataforma JDK minima: 17.
  * @author josee
  */
 public class UiLogin extends JFrame implements Themed{

@@ -11,8 +11,13 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 
 /**
+ * Responsabilidad: menu del area Algebra Lineal. Tiene botones para matrices,
+ * vectores, la teoria y el quiz de la materia.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class AlgLineal extends JFrame implements Themed{
     

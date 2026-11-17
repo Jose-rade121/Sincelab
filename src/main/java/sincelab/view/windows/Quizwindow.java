@@ -20,8 +20,17 @@ import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 /**
+ * Responsabilidad: ventana del quiz de una materia. Muestra una pregunta a la vez con
+ * sus 4 opciones en orden aleatorio, indica si la respuesta fue correcta y explica la
+ * solucion. Al finalizar muestra los aciertos y los puntos ganados
+ * (BancoPreguntas.PUNTOS_POR_PREGUNTA por cada respuesta correcta) y guarda el puntaje
+ * del usuario con PuntajeDAO.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author Angel
+ * @version 1.0
+ * 
  */
 public class Quizwindow extends JFrame implements Themed {
  

@@ -9,8 +9,14 @@ import sincelab.view.windows.MainWindow;
 import sincelab.view.windows.UiLogin;
 
 /**
+ * Responsabilidad: barra superior que se repite en todas las ventanas. Tiene el titulo
+ * SINCELAB (lleva al menu principal), el boton Acerca y el boton del astronauta (por
+ * ahora abre el acceso de usuario).
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 
 

@@ -5,8 +5,12 @@
 package sincelab.storage;
 
 /**
+ * Clase utilitaria encargada de realizar operaciones de cálculo diferencial
+ * simbólico y numérico sobre funciones polinómicas mediante la regla de la potencia.
  *
  * @author Angel
+ * @version 1.0
+ * @since JDK 11
  */
 public class derivada {
     

@@ -21,9 +21,11 @@ import sincelab.view.curses.matematicas2.Matematicas2;
 
 
 /**
- *  
+ * Responsabilidad: ventana principal de SINCELAB. Muestra un recuadro por cada area
+ * del conocimiento (Matematicas 2, Fisica 1, Humanidades y Algebra Lineal), cada uno
+ * con un boton Iniciar que abre la ventana de esa area.
  *
- * 
+ * Plataforma JDK minima: 17.
  *
  * @author josee
  */

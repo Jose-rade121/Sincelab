@@ -1,8 +1,13 @@
 package sincelab.view.curses.matematicas2;
 
 /**
+* Responsabilidad: menu del area Matematicas 2. Tiene botones para la calculadora de
+ * derivadas, la de integrales, la teoria y el quiz de la materia.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author Angel
+ * @version 1.0
  */
 import java.awt.*;
 import javax.swing.*;

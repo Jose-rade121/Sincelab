@@ -5,8 +5,12 @@
 package sincelab.storage;
 
 /**
+ * Clase utilitaria encargada de resolver operaciones de cálculo integral
+ * (antiderivadas e integrales definidas) sobre expresiones polinómicas.
  *
  * @author Angel
+ * @version 1.0
+ * @since JDK 11
  */
 public class integrales {
     

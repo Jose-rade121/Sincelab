@@ -2,8 +2,13 @@ package sincelab.view.utilities;
 import java.awt.Color;
 
 /**
+ * Responsabilidad: guarda los colores del tema actual (fondo, texto de la barra y
+ * barra de titulo) y permite cambiarlos entre modo claro, oscuro y verde.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class Themes {
              

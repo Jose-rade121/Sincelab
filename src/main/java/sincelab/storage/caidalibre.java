@@ -1,8 +1,13 @@
 package sincelab.storage;
 
 /**
+ * Clase utilitaria encargada de realizar los cálculos cinemáticos correspondientes
+ * al movimiento vertical de caída libre, modelándolo como un Movimiento Uniformemente
+ * Acelerado (MUA) con aceleración negativa debida a la gravedad.
  *
  * @author alejo
+ * @version 1.0
+ * @since JDK 11
  */
 public class caidalibre {
 

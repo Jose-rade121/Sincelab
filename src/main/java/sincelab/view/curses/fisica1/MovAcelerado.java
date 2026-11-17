@@ -4,8 +4,14 @@ import sincelab.storage.mua;
 
 
 /**
+ * Responsabilidad: calculadora del movimiento uniformemente acelerado: calcula la
+ * aceleracion, la velocidad final, la distancia o el tiempo a partir de los datos que
+ * cada opcion pide, usando la clase mua.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author alejo
+ * @version 1.0
  */
 public class MovAcelerado extends CalcFisica {
 

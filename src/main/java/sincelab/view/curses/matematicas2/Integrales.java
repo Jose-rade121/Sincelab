@@ -14,8 +14,14 @@ import sincelab.view.utilities.PrincipalFont;
 import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 /**
+  * Responsabilidad: ventana de la calculadora de la integral definida. Lee un polinomio
+ * y los limites a y b y muestra el valor de la integral, usando las clases polinomio e
+ * integrales. Incluye un teclado en pantalla.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author Angel
+ * @version 1.0
  */
 
 public class Integrales extends JFrame implements Themed {

@@ -18,8 +18,14 @@ import javax.swing.text.Document;
 import sincelab.view.utilities.PrincipalFont;
 
 /**
+* Responsabilidad: teclado en pantalla para escribir polinomios y numeros en los
+ * campos de texto de las calculadoras. Escribe en el campo que tenga el foco o, por
+ * defecto, en el primero.
  *
- * @author  Angel
+ * Plataforma JDK minima: 17.
+ *
+ * @author Angel
+ * @version 1.0
  */
 public class TecDevInt extends JPanel {
     

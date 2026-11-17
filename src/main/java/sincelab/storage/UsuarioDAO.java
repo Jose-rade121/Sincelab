@@ -6,7 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/** Crear cuentas e iniciar sesion contra la base de datos. */
+/** Crear cuentas e iniciar sesion contra la base de datos.
+ * * Objeto de Acceso a Datos (DAO) encargado de gestionar el registro de nuevos
+ * estudiantes y la autenticación de usuarios contra la base de datos MariaDB.
+ *
+ * @author Equipo SINCELAB
+ * @version 1.0
+ * @since JDK 16 (Requiere soporte para records)
+ */
 public final class UsuarioDAO {
 
     /** Datos de una cuenta ya verificada (puntos = suma de todas sus materias). */

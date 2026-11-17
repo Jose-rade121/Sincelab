@@ -3,6 +3,15 @@ package sincelab.view.utilities;
 import java.awt.Font;
 import java.io.InputStream;
 
+/**
+ * Responsabilidad: carga las fuentes del proyecto (Bestime, Hey Comic, Stay With Me y
+ * Nunito Black) desde los recursos y entrega copias con el estilo y el tamano pedidos.
+ *
+ * Plataforma JDK minima: 17.
+ *
+ * @author Equipo SINCELAB
+ * @version 1.0
+ */
 
 public class PrincipalFont{
     

@@ -1,8 +1,13 @@
 package sincelab.storage;
 
 /**
+* Clase utilitaria que implementa las ecuaciones cinemáticas del
+ * Movimiento Rectilíneo Uniformemente Acelerado (MUA) para el cálculo
+ * de aceleración, velocidad, desplazamiento, distancia total recorrida y tiempo.
  *
  * @author alejo
+ * @version 1.0
+ * @since JDK 11
  */
 public class mua {
 

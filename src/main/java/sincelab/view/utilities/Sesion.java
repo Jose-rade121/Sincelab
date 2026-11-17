@@ -3,8 +3,14 @@ package sincelab.view.utilities;
 import sincelab.storage.sesion.Users;
  
 /**
+ * Responsabilidad: guarda en memoria al usuario que tiene la sesion iniciada y el id
+ * de su cuenta en la base de datos. Las ventanas consultan aqui quien esta usando la
+ * aplicacion.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author Angel
+ * @version 1.0
  */
 public class Sesion {
  

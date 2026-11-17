@@ -10,6 +10,11 @@ import javax.crypto.spec.PBEKeySpec;
  * Guarda y verifica contrasenas con PBKDF2 (viene con Java, sin dependencias).
  * En la base de datos solo se guarda el hash, nunca la contrasena.
  * Usa JPasswordField.getPassword(), que devuelve char[].
+ *
+ *
+ * @author
+ * @version 1.0
+ * @since JDK 11
  */
 public final class Seguridad {
 

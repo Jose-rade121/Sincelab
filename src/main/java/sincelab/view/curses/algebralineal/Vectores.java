@@ -11,8 +11,13 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 
 /**
+ * Responsabilidad: ventana de vectores en 3D. La persona escribe dos vectores y la
+ * ventana muestra el angulo entre ellos y su producto cruz, usando la clase Vector3D.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class Vectores extends JFrame implements Themed {
     

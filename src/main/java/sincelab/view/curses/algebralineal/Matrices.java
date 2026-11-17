@@ -10,8 +10,14 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 
 /**
+* Responsabilidad: ventana de matrices cuadradas. La persona elige el orden n (de 2 a
+ * 5), escribe los valores y la ventana calcula la determinante y la inversa con la
+ * clase MatrizCuadrada.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
+ * @version 1.0
  */
 public class Matrices extends JFrame implements Themed {
     

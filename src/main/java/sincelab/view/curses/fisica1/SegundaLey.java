@@ -3,8 +3,13 @@ package sincelab.view.curses.fisica1;
 import sincelab.storage.segundaley;
 
 /**
+ * Responsabilidad: calculadora de la segunda ley de Newton: calcula la fuerza, la masa
+ * o la aceleracion con F = m * a, usando la clase segundaley.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author alejo
+ * @version 1.0
  */
 public class SegundaLey extends CalcFisica {
 

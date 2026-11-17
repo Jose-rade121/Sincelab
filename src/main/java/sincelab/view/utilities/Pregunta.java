@@ -11,8 +11,14 @@ import java.util.List;
 
 
 /**
- * autor @Angel
- * Una pregunta de opcion multiple con 4 opciones y una sola correcta.
+ ** Responsabilidad: representa una pregunta de opcion multiple con 4 opciones y una
+ * sola correcta, con su explicacion. Puede entregar el orden aleatorio en que se
+ * muestran las opciones.
+ *
+ * Plataforma JDK minima: 17.
+ *
+ * @author Angel
+ * @version 1.0
  */
 public class Pregunta {
  

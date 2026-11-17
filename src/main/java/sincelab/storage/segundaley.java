@@ -1,8 +1,13 @@
 package sincelab.storage;
 
 /**
+ * Clase utilitaria encargada de resolver operaciones fundamentales de dinámica
+ * basadas en la Segunda Ley de Newton ($F = m \cdot a$), permitiendo despejar
+ * fuerza neta, masa o aceleración.
  *
  * @author alejo
+ * @version 1.0
+ * @since JDK 11
  */
 public class segundaley {
 

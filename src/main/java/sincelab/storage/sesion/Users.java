@@ -8,6 +8,8 @@ package sincelab.storage.sesion;
  *  - Guardar puntos de un quiz:      PuntajeDAO.guardar(materia, puntos)
  *
  * @author josee
+ * @version 1.0
+ * @since JDK 11
  */
 public class Users {
  

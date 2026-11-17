@@ -12,8 +12,14 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 
 /**
- * Ranking general: los 10 con mas puntos (suma de todas las materias).
- * Para abrirla:  new RankingWindow();
+Responsabilidad: ventana con el ranking general: los 10 usuarios con mas puntos
+ * (suma de todas las materias), consultados en la base de datos con PuntajeDAO. Para
+ * abrirla: {@code new RankingWindow();}
+ *
+ * Plataforma JDK minima: 17.
+ *
+ * @author Josee
+ * @version 1.0
  */
 public class RankingWindow extends JFrame implements Themed{
 

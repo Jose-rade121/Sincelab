@@ -13,10 +13,15 @@ import sincelab.view.utilities.Themes;
 
 
 /**
- * Lo que comparten las 3 calculadoras de fisica: los campos, el resultado y
- * los botones. Cada calculadora solo pone sus formulas en calcular().
+  * Responsabilidad: base de las tres calculadoras de fisica (movimiento uniformemente
+ * acelerado, segunda ley de Newton y caida libre). Arma la ventana con los botones de
+ * que calcular, los campos, el area de resultado y los botones Iniciar, Reiniciar y
+ * Resultados. Cada calculadora solo escribe sus formulas en calcular.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author alejo
+ * @version 1.0
  */
 public abstract class CalcFisica extends JFrame implements Themed {
 

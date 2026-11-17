@@ -8,6 +8,10 @@ import sincelab.view.utilities.Themed;
 import sincelab.view.utilities.Themes;
 
 /**
+ * Responsabilidad: ventana Acerca de SINCELAB. Por ahora muestra el encabezado de la
+ * aplicacion sobre el fondo del tema actual.
+ *
+ * Plataforma JDK minima: 17.
  *
  * @author josee
  */
