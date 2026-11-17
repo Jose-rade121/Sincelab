@@ -178,6 +178,7 @@ Sincelab/
 │   │               ├── icons/
 │   │               │   ├── astronaunt-icon.png
 │   │               │   ├── Astronauta.png
+│   │               │   ├── descargar (1).jpg
 │   │               │   ├── fondo.jfif
 │   │               │   ├── guardado.png
 │   │               │   ├── icon.png
@@ -193,7 +194,7 @@ Sincelab/
 │       └── java/
 │           └── sincelab/
 │               └── tests/
-│                   └── DaoSmoke.java
+│                   └── DaoSmoke_otro.java
 ├── .env.example
 ├── .gitignore
 ├── docker-compose.yml
